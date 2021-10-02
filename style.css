@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
+@font-face {
+  font-family: 'SBAggroL';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroL.woff')
+    format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+label {
+  margin-left: 6vh;
+  font-size: small;
+  padding-top: 0.1vh !important;
+  margin-top: 0.1vh !important;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+footer {
+  vertical-align: bottom;
+  border-top: 1px solid black;
+  margin: 0px;
+  font-size: small !important;
+  padding-top: 3%;
+  font-family: 'Gowun Dodum' -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 3px 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+a {
+  font-size: small !important;
+  font-family: 'Gowun Dodum' -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
+  text-decoration: none;
+  color: #676767 !important;
+}
+input {
+  border: 1px solid !important;
+  border-radius: 10px;
+  vertical-align: center;
+  padding-bottom: 12px;
+  text-align: center;
+  margin-left: 6vh;
+  height: 20px;
+  width: auto;
+  font-size: smaller;
+  padding-top: 20px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background: transparent;
+}
+h1 {
+  margin-top: 4vh !important;
+  font-family: 'SBAggroL', Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+* {
+  font-family: 'Gowun Dodum', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 30px;
+  text-align: center;
+}
+#school-name {
+  font-size: smaller;
+  margin: 0px !important;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+p {
+  padding-top: 0.5vh !important;
+  margin-top: 0.5vh !important;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.input:focus {
+  outline: none;
+}
+#devs {
+  font-size: smaller;
+}
+#previous-school {
+  font-size: small;
+}
+#button {
+  float: right;
+  background: transparent;
+  border: none !important;
+}
+button {
+  border: #f1f1f1 2px solid;
+  border-radius: 30px;
+}
+@media (prefers-color-scheme: dark) {
+  button {
+    color: #f1f1f1;
+    background: transparent;
+  }
+  label {
+    color: #f1f1f1;
+  }
+  footer {
+    color: #f1f1f1;
+    border-top: 1px solid #e2e2e2 !important;
+  }
+  a {
+    color: #fff !important;
+  }
+  .input {
+    border: #e2e2e2 1px solid !important;
+    color: #f1f1f1;
+  }
+  h1 {
+    color: #f1f1f1;
+  }
+  #school-name {
+    color: #f1f1f1;
+  }
+  body {
+    background-color: #000000;
+  }
+  p {
+    color: #f1f1f1;
+  }
+}
