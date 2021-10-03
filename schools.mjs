@@ -3396,4 +3396,4 @@ const schools = {
   흥덕고등학교: ['7530924', 'J10'],
   흥진고등학교: ['7530140', 'J10'],
 };
-export default schools;
+export { schools };

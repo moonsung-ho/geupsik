@@ -1,4 +1,4 @@
-import { schools } from '../schools.mjs';
+import { schools } from 'https://modest-varahamihira-8e98a5.netlify.app/schools.mjs';
 let schoolCode = null;
 let officeCode = null;
 function click() {
