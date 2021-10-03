@@ -1,4 +1,4 @@
-import { schools } from 'https://modest-varahamihira-8e98a5.netlify.app/schools.mjs';
+import {findSchool} from './schools.mjs';
 let schoolCode = null;
 let officeCode = null;
 function click() {
@@ -6,8 +6,8 @@ function click() {
     const input = prompt(
       '학교 이름을 입력하세요. (ex.답십리초, 신길중, 이화여고)',
     );
-    schoolCode = schools[input][0];
-    officeCode = schools[input][1];
+    schoolCode = findSchool(input)[0];
+    officeCode = findSchool(input)[1];
     if (schoolCode) {
       localStorage.setItem('schoolcode', schoolCode);
     }
@@ -15,7 +15,7 @@ function click() {
       localStorage.setItem('officecode', officeCode);
     }
   }
-  history.back()
+  history.back();
 }
 document
   .getElementById('school-change-button')
