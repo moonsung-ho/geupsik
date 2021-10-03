@@ -1,4 +1,5 @@
 const findSchool = (name) => {
+  console.log([schools[name][0], schools[name][1]])
   return [schools[name][0], schools[name][1]];
 }
 const schools = {

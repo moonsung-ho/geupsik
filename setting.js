@@ -1,4 +1,4 @@
-import {findSchool} from './schools.mjs';
+import { findSchool } from './schools.mjs';
 let schoolCode = null;
 let officeCode = null;
 function click() {
