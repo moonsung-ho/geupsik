@@ -1,4 +1,4 @@
-import { findSchool } from './schools.mjs';
+import { schools } from './schools.mjs';
 import { getSchoolCode, setSchoolCode } from './db.mjs';
 import { getDateStr, getDate, parseDateStr } from './utils.mjs';
 import { getMealInfo } from './api.mjs';
@@ -22,8 +22,8 @@ while (!schoolCode) {
   const input = prompt(
     '학교 이름을 입력하세요. (ex.답십리초, 신길중, 이화여고)',
   );
-  schoolCode = findSchool(input)[0];
-  officeCode = findSchool(input)[1];
+  schoolCode = schools[input][0];
+  officeCode = schools[input][1];
   if (schoolCode) {
     setSchoolCode(schoolCode);
   }

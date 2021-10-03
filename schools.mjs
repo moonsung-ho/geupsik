@@ -1,7 +1,3 @@
-const findSchool = (name) => {
-  console.log([schools[name][0], schools[name][1]])
-  return [schools[name][0], schools[name][1]];
-}
 const schools = {
   //초:서울
   경기초: ['7031110', 'B10'],
@@ -3400,4 +3396,4 @@ const schools = {
   흥덕고: ['7530924', 'J10'],
   흥진고: ['7530140', 'J10'],
 };
-export { findSchool };
+export { schools };
