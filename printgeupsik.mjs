@@ -1,7 +1,6 @@
 const printGeupsik = () => {
   let filter = 'win16|win32|win64|mac|macintel';
   if (0 > filter.indexOf(navigator.platform.toLowerCase())) {
-    console.log("모바일")
   } else {
     console.log('Client platform : PC');
     fetch(
