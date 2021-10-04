@@ -9,12 +9,12 @@ const printGeupsik = () => {
     )
       .then((res) => res.json())
       .then((json) => {
+        console.log(json.date)
         console.log(`오늘자 NASA 선정 사진: ${json.title}`);
         console.log(
           '%c ',
-          `font-size:300px; background:url(${json.hdurl}) no-repeat;`,
+          `font-size:300px; background:url(${json.url}) no-repeat;`,
         );
-        console.log(json.explanation);
       });
   }
 };
