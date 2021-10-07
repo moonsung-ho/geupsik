@@ -7,8 +7,10 @@
   font-style: normal;
   font-display: swap;
 }
+body {
+  position: relative;
+}
 label {
-  margin-left: 6vh;
   font-size: small;
   padding-top: 0.1vh !important;
   margin-top: 0.1vh !important;
@@ -48,7 +50,6 @@ input {
   vertical-align: center;
   padding-bottom: 12px;
   text-align: center;
-  margin-left: 6vh;
   height: 20px;
   width: auto;
   font-size: smaller;
@@ -97,9 +98,16 @@ p {
   font-size: small;
 }
 #button {
-  float: right;
   background: transparent;
   border: none !important;
+  position: absolute;
+  right: 0;
+}
+#sharebutton {
+  background: transparent;
+  border: none !important;
+  position: absolute;
+  left: 0;
 }
 button {
   border: #f1f1f1 2px solid;

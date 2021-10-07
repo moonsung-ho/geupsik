@@ -24,5 +24,4 @@ const parseDateStr = (s) => {
   let date = splitted[2] * 1;
   return { year, month, date };
 };
-
 export { getDate, getDateStr, parseDateStr };
