@@ -14,21 +14,23 @@ if (typeof navigator.share === 'undefined') {
   // 공유하기 버튼을 지원하지 않는 경우에 대한 폴백 처리
   document.getElementById('sharebutton').hidden = true;
 }
-document.getElementById('sharebutton').addEventListener("click", async () => {
+document.getElementById('sharebutton').addEventListener('click', async () => {
   try {
-    share()
+    share();
   } catch (e) {
-    console.log("공유 실패");
+    console.log('공유 실패');
   }
 });
 function share() {
   console.log(
-    `${document.getElementById('school-name').innerText}의 ${dateInput.value} 급식 - ${document.getElementsByClassName('today')[0].innerText}`,
+    `${document.getElementById('school-name').innerText}의 ${
+      dateInput.value
+    } 급식 - ${document.getElementsByClassName('today')[0].innerText}`,
   );
   window.navigator.share({
-    text: `${document.getElementById('school-name')}의 ${getDateNStr(
-      getDatePStr(),
-    )} 급식 - ${document.getElementsByClassName('today')[0]}`, // 공유될 설명
+    text: `${document.getElementById('school-name').innerText}의 ${
+      dateInput.value
+    } 급식 - ${document.getElementsByClassName('today')[0].innerText}`, // 공유될 설명
     url: 'https://급식.ml', // 공유될 URL
   });
 }
