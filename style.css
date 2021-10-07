@@ -20,7 +20,9 @@ label {
   user-select: none;
 }
 footer {
-  vertical-align: bottom;
+  position: relative;
+}
+span {
   border-top: 1px solid black;
   margin: 0px;
   font-size: small !important;
@@ -30,6 +32,8 @@ footer {
   position: absolute;
   left: 0;
   bottom: 0;
+  right: 0;
+  top: 100%;
   width: 100%;
   padding: 3px 0;
   -webkit-user-select: none;
