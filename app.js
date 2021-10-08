@@ -23,16 +23,20 @@ document.getElementById('sharebutton').addEventListener('click', async () => {
   }
 });
 function share() {
+  let shortSchool = document
+    .getElementById('school-name')
+    .innerText.replace(/\🎉/g, '')
+    .replace('등', '')
+    .replace('학교', '');
+  if(shortSchool.includes("초")){
+    shortSchool = shortSchool.replace("서울", "")
+  }
   let { year, month, date } = parseDateStr(dateInput.value);
   window.navigator.share({
     title: `${
       document.getElementById('school-name').innerText
     }의 ${year}년 ${month}월 ${date}일 급식`,
-    text: `${year}년 ${month}월 ${date}일 ${document
-      .getElementById('school-name')
-      .innerText.replace(/\🎉/g, '')
-      .replace("등", '')
-      .replace("학교", '')} 급식
+    text: `${year}년 ${month}월 ${date}일 ${shortSchool} 급식
     ${document.getElementsByClassName('today')[0].innerText}`, // 공유될 설명
     url: 'https://급식.ml', // 공유될 URL
   });
