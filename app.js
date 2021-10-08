@@ -36,8 +36,7 @@ function share() {
     title: `${
       document.getElementById('school-name').innerText
     }의 ${year}년 ${month}월 ${date}일 급식`,
-    text: `${year}년 ${month}월 ${date}일 ${shortSchool} 급식
-    ${document.getElementsByClassName('today')[0].innerText}`, // 공유될 설명
+    text: `${year}년 ${month}월 ${date}일 ${shortSchool} 급식${document.getElementsByClassName('today')[0].innerText}`, // 공유될 설명
     url: 'https://급식.ml', // 공유될 URL
   });
 }
