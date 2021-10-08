@@ -7,9 +7,6 @@
   font-style: normal;
   font-display: swap;
 }
-body {
-  position: relative;
-}
 label {
   font-size: small;
   padding-top: 0.1vh !important;
@@ -20,9 +17,7 @@ label {
   user-select: none;
 }
 footer {
-  position: relative;
-}
-span {
+  vertical-align: bottom;
   border-top: 1px solid black;
   margin: 0px;
   font-size: small !important;
@@ -32,8 +27,6 @@ span {
   position: absolute;
   left: 0;
   bottom: 0;
-  right: 0;
-  top: 100%;
   width: 100%;
   padding: 3px 0;
   -webkit-user-select: none;
@@ -104,14 +97,12 @@ p {
 #button {
   background: transparent;
   border: none !important;
-  position: absolute;
-  right: 0;
+  float: right;
 }
 #sharebutton {
   background: transparent;
   border: none !important;
-  position: absolute;
-  left: 0;
+  float: left;
 }
 button {
   border: #f1f1f1 2px solid;

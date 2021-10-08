@@ -12,7 +12,7 @@ import {
 printGeupsik();
 if (typeof navigator.share === 'undefined') {
   // 공유하기 버튼을 지원하지 않는 경우에 대한 폴백 처리
-  document.getElementById('sharebutton').hidden = true;
+  //document.getElementById('sharebutton').hidden = true;
 }
 document.getElementById('sharebutton').addEventListener('click', async () => {
   try {
