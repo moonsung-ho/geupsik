@@ -1,4 +1,3 @@
-import { schools } from './schools.mjs';
 import { getSchoolCode, setSchoolCode } from './db.mjs';
 import { getDateStr, getDate, parseDateStr } from './utils.mjs';
 import { getMealInfo } from './api.mjs';
@@ -9,17 +8,44 @@ import {
   getPrevDate,
   getDatePStr,
 } from './dates.mjs';
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('service-worker.js');
+}
+
+function click() {
+  let school = prompt('학교 이름을 입력해 주세요');
+  fetch(
+    `https://open.neis.go.kr/hub/schoolInfo?SCHUL_NM=${school}&Type=json&KEY=a9a5367947564a1aa13e46ba545de634`,
+  )
+    .then((res) => res.json())
+    .then((json) => {
+      schoolCode = json['schoolInfo'][1].row[0]['SD_SCHUL_CODE'];
+      officeCode = json['schoolInfo'][1].row[0]['ATPT_OFCDC_SC_CODE'];
+      if (schoolCode) {
+        localStorage.setItem('schoolcode', schoolCode);
+      }
+      if (officeCode) {
+        localStorage.setItem('officecode', officeCode);
+      }
+    })
+    .catch((err) => {
+      click();
+    });
+}
+
 var agent = navigator.userAgent.toLowerCase();
 if (
   (navigator.appName == 'Netscape' &&
     navigator.userAgent.search('Trident') != -1) ||
   agent.indexOf('msie') != -1
 ) {
-  console.error("ieieieieieieieieieieieieieieieie")
+  console.error('ieieieieieieieieieieieieieieieie');
   alert('익스플로러 쓰지마세요');
-  location.href = "https://chrome.google.com"
+  location.href = 'https://chrome.google.com';
 }
+
 printGeupsik();
+
 if (typeof navigator.share === 'undefined') {
   // 공유하기 버튼을 지원하지 않는 경우에 대한 폴백 처리
   document.getElementById('sharebutton').disabled = true;
@@ -51,27 +77,15 @@ ${document.getElementsByClassName('today')[0].innerText}`, // 공유될 설명
     url: 'https://급식.ml', // 공유될 URL
   });
 }
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('service-worker.js');
-}
 
 let dateInput = document.querySelector('#select-date');
 dateInput.value = getDateStr();
 let schoolCode = getSchoolCode();
 let officeCode = localStorage.getItem('officecode');
-while (!schoolCode) {
-  const input = prompt(
-    '학교 이름을 입력하세요. (ex.답십리초, 신길중, 이화여고)',
-  );
-  schoolCode = schools[input][0];
-  officeCode = schools[input][1];
-  if (schoolCode) {
-    setSchoolCode(schoolCode);
-  }
-  if (officeCode) {
-    localStorage.setItem('officecode', officeCode);
-  }
+if (!schoolCode) {
+  click();
 }
+
 if (
   navigator.userAgent.indexOf('iPhone') != -1 ||
   navigator.userAgent.indexOf('iPod') != -1 ||
@@ -86,6 +100,7 @@ if (
     }
   }
 }
+
 let geupsik = localStorage.getItem('geupsik');
 localStorage.setItem('geupsik', geupsik * 1 + 1);
 
@@ -93,6 +108,7 @@ document.querySelector('#select-date').onchange = function () {
   let dayChosen = parseDateStr(dateInput.value);
   getMealInfo(schoolCode, dayChosen);
 };
+
 document.addEventListener('touchstart', handleTouchStart, false);
 document.addEventListener('touchmove', handleTouchMove, false);
 var xDown = null;
@@ -144,4 +160,5 @@ function handleTouchMove(evt) {
   xDown = null;
   yDown = null;
 }
+
 getMealInfo(schoolCode, getDate());
