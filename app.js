@@ -9,6 +9,16 @@ import {
   getPrevDate,
   getDatePStr,
 } from './dates.mjs';
+var agent = navigator.userAgent.toLowerCase();
+if (
+  (navigator.appName == 'Netscape' &&
+    navigator.userAgent.search('Trident') != -1) ||
+  agent.indexOf('msie') != -1
+) {
+  console.error("ieieieieieieieieieieieieieieieie")
+  alert('익스플로러 쓰지마세요');
+  location.href = "https://chrome.google.com"
+}
 printGeupsik();
 if (typeof navigator.share === 'undefined') {
   // 공유하기 버튼을 지원하지 않는 경우에 대한 폴백 처리
