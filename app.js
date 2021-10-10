@@ -8,29 +8,15 @@ import {
   getPrevDate,
   getDatePStr,
 } from './dates.mjs';
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('service-worker.js');
+
+let schoolCode = getSchoolCode();
+let officeCode = localStorage.getItem('officecode');
+if (!schoolCode) {
+  location.href = '/first';
 }
 
-function click() {
-  let school = prompt('학교 이름을 입력해 주세요');
-  fetch(
-    `https://open.neis.go.kr/hub/schoolInfo?SCHUL_NM=${school}&Type=json&KEY=a9a5367947564a1aa13e46ba545de634`,
-  )
-    .then((res) => res.json())
-    .then((json) => {
-      schoolCode = json['schoolInfo'][1].row[0]['SD_SCHUL_CODE'];
-      officeCode = json['schoolInfo'][1].row[0]['ATPT_OFCDC_SC_CODE'];
-      if (schoolCode) {
-        localStorage.setItem('schoolcode', schoolCode);
-      }
-      if (officeCode) {
-        localStorage.setItem('officecode', officeCode);
-      }
-    })
-    .catch((err) => {
-      click();
-    });
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('service-worker.js');
 }
 
 var agent = navigator.userAgent.toLowerCase();
@@ -80,11 +66,6 @@ ${document.getElementsByClassName('today')[0].innerText}`, // 공유될 설명
 
 let dateInput = document.querySelector('#select-date');
 dateInput.value = getDateStr();
-let schoolCode = getSchoolCode();
-let officeCode = localStorage.getItem('officecode');
-if (!schoolCode) {
-  click();
-}
 
 if (
   navigator.userAgent.indexOf('iPhone') != -1 ||
