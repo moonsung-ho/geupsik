@@ -15,6 +15,14 @@ function get() {
           }<option>${json['schoolInfo'][1].row[n]['SCHUL_NM']}</option>`;
           n = n + 1;
         }
+        let schoolCode = json['schoolInfo'][1].row[0]['SD_SCHUL_CODE'];
+        let officeCode = json['schoolInfo'][1].row[0]['SATPT_OFCDC_SC_CODE'];
+        if (schoolCode) {
+          localStorage.setItem('schoolcode', schoolCode);
+        }
+        if (officeCode) {
+          localStorage.setItem('officecode', officeCode);
+        }
       } else {
         let schoolCode = json['schoolInfo'][1].row[0]['SD_SCHUL_CODE'];
         let officeCode = json['schoolInfo'][1].row[0]['SATPT_OFCDC_SC_CODE'];

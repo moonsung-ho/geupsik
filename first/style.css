@@ -9,6 +9,7 @@ p {
   text-align: right;
   position: absolute;
   right: 0;
+  margin: 5px;
   bottom: 0;
 }
 *:focus {
