@@ -10,7 +10,6 @@ import {
 } from './dates.mjs';
 
 let schoolCode = getSchoolCode();
-let officeCode = localStorage.getItem('officecode');
 if (!schoolCode) {
   location.href = '/first';
 }
@@ -67,19 +66,18 @@ ${document.getElementsByClassName('today')[0].innerText}`, // 공유될 설명
 let dateInput = document.querySelector('#select-date');
 dateInput.value = getDateStr();
 
-if (
-  navigator.userAgent.indexOf('iPhone') != -1 ||
-  navigator.userAgent.indexOf('iPod') != -1 ||
-  navigator.userAgent.indexOf('iPad') != -1
-) {
-  if (!window.navigator.standalone) {
-    if (!localStorage.getItem('homescreenbanner')) {
-      alert(
-        '밑에 있는 공유 버튼을 누르고 스크롤을 내려서 앱을 홈 화면에 추가하세요!',
-      );
-      localStorage.setItem('homescreenbanner', true);
-    }
-  }
+// Detects if device is on iOS
+const isIos = () => {
+  const userAgent = window.navigator.userAgent.toLowerCase();
+  return /iphone|ipad|ipod/.test(userAgent);
+};
+// Detects if device is in standalone mode
+const isInStandaloneMode = () =>
+  'standalone' in window.navigator && window.navigator.standalone;
+
+// Checks if should display install popup notification:
+if (isIos() && !isInStandaloneMode()) {
+  this.setState({ showInstallMessage: true });
 }
 
 let geupsik = localStorage.getItem('geupsik');
