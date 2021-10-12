@@ -109,6 +109,18 @@ button {
   border-radius: 30px;
 }
 @media (prefers-color-scheme: dark) {
+  div {
+    color: #000;
+  }
+  @keyframes colorChange{
+    0%  { color: #8BC34A;}
+    25%  { color: #03A9F4;}
+    50%  { color: #FF5722;}
+    100%{ color: #607D8B;}
+  }
+  .descAnim765 {
+    animation: colorChange 1s ease-out 0s infinite alternate none running;
+  }
   button {
     color: #f1f1f1;
     background: transparent;
