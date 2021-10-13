@@ -1,27 +1,76 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GET STARTED</title>
-    <link rel="stylesheet" href="./style.css" />
-  </head>
-  <body>
-    <h1>학교를 검색해 주십시오.</h1>
-    <div class="search">
-      <input
-        type="text"
-        id="school"
-        onchange="get()"
-        placeholder="학교 이름 입력"
-      />
-      <select id="select">
-        <option value=""></option>
-      </select>
-    </div>
-    <button onclick="location.href = '/'">나가기</button>
-    <p>문성호</p>
-    <script src="/first/script.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GET STARTED</title>
+  <link rel="stylesheet" href="./style.css" />
+  <style>
+    .label {
+      position: relative;
+      display: block;
+      width: 50px;
+      height: 31px;
+      border-radius: 100px;
+      background-color: #000839;
+      overflow: hidden;
+      cursor: pointer;
+      margin-top: 100px;
+    }
+
+    .label:before,
+    .label:after {
+      display: block;
+      position: absolute;
+      content: "";
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      top: 3px;
+      left: 3px;
+      transition: 0.5s ease;
+    }
+
+    .label:before {
+      background-color: #ffa41b;
+    }
+
+    .label:after {
+      background-color: #000839;
+      left: -58px;
+      transform: scale(0.00001);
+    }
+
+    .input[type="checkbox"] {
+      display: none;
+    }
+
+    .input[type="checkbox"]:checked+label:before {
+      background-color: #fff;
+      transform: translateX(20px);
+    }
+
+    .input[type="checkbox"]:checked+label:after {
+      transform: translateX(70px) scale(1);
+    }
+  </style>
+</head>
+
+<body>
+  <h1>학교를 검색해 주십시오.</h1>
+  <div class="search">
+    <input type="text" id="school" onchange="get()" placeholder="학교 이름 입력" />
+    <select id="select">
+      <option value=""></option>
+    </select>
+  </div>
+  <input type="checkbox" id="toggle" class="input" />
+  <label onclick="darkModeToggle()" for="toggle" class="label"></label>
+  <button onclick="location.href = '/'">나가기</button>
+  <p>문성호</p>
+  <script src="/first/script.js"></script>
+</body>
+
 </html>

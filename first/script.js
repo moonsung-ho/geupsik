@@ -35,11 +35,9 @@ function get() {
           } else {
             officeName = officeName.substr(0, 2);
           }
-          document.getElementById('select').innerHTML = `${
-            document.getElementById('select').innerHTML
-          }<option>${
-            json['schoolInfo'][1].row[n]['SCHUL_NM']
-          }(${officeName})</option>`;
+          document.getElementById('select').innerHTML = `${document.getElementById('select').innerHTML
+            }<option>${json['schoolInfo'][1].row[n]['SCHUL_NM']
+            }(${officeName})</option>`;
           n = n + 1;
         }
         let schoolCode = json['schoolInfo'][1].row[0]['SD_SCHUL_CODE'];
@@ -136,3 +134,12 @@ selectElement.addEventListener('change', (event) => {
       }
     });
 });
+function darkModeToggle() {
+  if(localStorage.getItem("theme") === "dark") {
+    localStorage.setItem("theme", "light")
+    document.querySelector("head").innerHTML = document.querySelector("head").innerHTML.replace('<link rel="stylesheet" href="dark.css">', "")
+  } else {
+    localStorage.setItem("theme", "dark")
+    document.querySelector("head").innerHTML = `${document.querySelector("head").innerHTML}<link rel="stylesheet" href="dark.css">`
+  }
+}
