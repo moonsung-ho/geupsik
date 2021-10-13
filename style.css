@@ -108,47 +108,37 @@ button {
   border: #f1f1f1 2px solid;
   border-radius: 30px;
 }
-@media (prefers-color-scheme: dark) {
-  div {
+/*다크모드*/
+  html.dark div {
     color: #000;
   }
-  @keyframes colorChange{
-    0%  { color: #8BC34A;}
-    25%  { color: #03A9F4;}
-    50%  { color: #FF5722;}
-    100%{ color: #607D8B;}
-  }
-  .descAnim765 {
-    animation: colorChange 1s ease-out 0s infinite alternate none running;
-  }
-  button {
+  html.dark button {
     color: #f1f1f1;
     background: transparent;
   }
-  label {
+  html.dark label {
     color: #f1f1f1;
   }
-  footer {
+  html.dark footer {
     color: #f1f1f1;
     border-top: 1px solid #e2e2e2 !important;
   }
-  a {
+  html.dark a {
     color: #fff !important;
   }
-  .input {
+  html.dark .input {
     border: #e2e2e2 1px solid !important;
     color: #f1f1f1;
   }
-  h1 {
+  html.dark h1 {
     color: #f1f1f1;
   }
-  #school-name {
+  html.dark #school-name {
     color: #f1f1f1;
   }
-  body {
+  html.dark body {
     background-color: #000000;
   }
-  p {
+  html.dark p {
     color: #f1f1f1;
   }
-}

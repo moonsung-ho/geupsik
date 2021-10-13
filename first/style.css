@@ -38,18 +38,18 @@ h1 {
   text-align: center;
   margin-top: 5vh;
 }
-@media (prefers-color-scheme: dark) {
-  button {
+
+
+  html.dark button {
     border: 2px solid #f1f1f1;
   }
-  button:hover {
+  html.dark button:hover {
     box-shadow: rgba(255, 255, 255, 0.35) 0px 5px 10px;
   }
-  * {
+  html.dark * {
     background-color: #000000;
     color: #f1f1f1;
   }
-  .search {
+  html.dark .search {
     border: 3px solid #f1f1f1;
   }
-}

@@ -8,6 +8,10 @@ import {
   getPrevDate,
   getDatePStr,
 } from './dates.mjs';
+//document.documentElement.classList.add('dark');
+if (localStorage.getItem('theme') === 'dark') {
+  document.documentElement.classList.toggle('dark');
+}
 
 let schoolCode = getSchoolCode();
 if (!schoolCode) {
