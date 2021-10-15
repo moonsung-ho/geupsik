@@ -87,9 +87,6 @@ function share() {
   }
   let { year, month, date } = parseDateStr(dateInput.value);
   window.navigator.share({
-    title: `${
-      document.getElementById('school-name').innerText
-    }의 ${month}월 ${date}일 급식`,
     text: `${year}년 ${month}월 ${date}일 ${shortSchool} 급식`, // 공유될 설명
     url: `http://급식.ml/?date=${year}-${month}-${date}&schoolcode=${schoolCode}&officecode=${officeCode}`, // 공유될 URL
   });
