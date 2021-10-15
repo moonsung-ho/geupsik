@@ -21,7 +21,7 @@ const parseDateStr = (s) => {
   const splitted = s.split('-');
   const year = splitted[0] * 1;
   let month = splitted[1];
-  let date = splitted[2] * 1;
+  let date = splitted[2];
   return { year, month, date };
 };
 export { getDate, getDateStr, parseDateStr };
