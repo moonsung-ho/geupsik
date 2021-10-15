@@ -8,13 +8,42 @@ import {
   getPrevDate,
   getDatePStr,
 } from './dates.mjs';
+let dateInput = document.querySelector('#select-date');
+const urlSearchParams = new URLSearchParams(window.location.search);
+const params = Object.fromEntries(urlSearchParams.entries());
+function getSchoolQuery() {
+  if (params['schoolcode'] != undefined) {
+    let schoolQuery = params['schoolcode'];
+    return schoolQuery;
+  }
+  return getSchoolCode();
+}
+function getOfficeQuery() {
+  if (params['officecode'] != undefined) {
+    let officeQuery = params['officecode'];
+    return officeQuery;
+  }
+  return localStorage.getItem('officecode');
+}
+function getDateQuery() {
+  if (params['date'] != undefined) {
+    let dateQuery = params['date'].split('-');
+    const year = dateQuery[0];
+    const month = dateQuery[1];
+    const date = dateQuery[2];
+    dateInput.value = `${year}-${month}-${date}`;
+    return { year, month, date };
+  }
+  return getDate();
+}
 //document.documentElement.classList.add('dark');
 if (localStorage.getItem('theme') === 'dark') {
   document.documentElement.classList.toggle('dark');
 }
 
 let schoolCode = getSchoolCode();
-if (!schoolCode) {
+let officeCode = localStorage.getItem('officecode');
+if (!schoolCode && getOfficeQuery() === localStorage.getItem('officecode')) {
   location.href = '/first';
 }
 
@@ -30,7 +59,7 @@ if (
 ) {
   console.error('ieieieieieieieieieieieieieieieie');
   alert('익스플로러 쓰지마세요');
-  location.href = 'https://chrome.google.com';
+  window.location = 'microsoft-edge:' + window.location.href;
 }
 
 printGeupsik();
@@ -44,7 +73,7 @@ document.getElementById('sharebutton').addEventListener('click', async () => {
   try {
     share();
   } catch (e) {
-    console.log('공유 실패');
+    console.log('공유 실패' + e);
   }
 });
 function share() {
@@ -61,13 +90,11 @@ function share() {
     title: `${
       document.getElementById('school-name').innerText
     }의 ${month}월 ${date}일 급식`,
-    text: `${year}년 ${month}월 ${date}일 ${shortSchool} 급식:
-${document.getElementsByClassName('today')[0].innerText}`, // 공유될 설명
-    url: 'https://급식.ml', // 공유될 URL
+    text: `${year}년 ${month}월 ${date}일 ${shortSchool} 급식`, // 공유될 설명
+    url: `http://급식.ml/?date=${year}-${month}-${date}&schoolcode=${schoolCode}&officecode=${officeCode}`, // 공유될 URL
   });
 }
 
-let dateInput = document.querySelector('#select-date');
 dateInput.value = getDateStr();
 
 // Detects if device is on iOS
@@ -110,7 +137,7 @@ localStorage.setItem('geupsik', geupsik * 1 + 1);
 
 document.querySelector('#select-date').onchange = function () {
   let dayChosen = parseDateStr(dateInput.value);
-  getMealInfo(schoolCode, dayChosen);
+  getMealInfo(schoolCode, officeCode, dayChosen);
 };
 
 document.addEventListener('touchstart', handleTouchStart, false);
@@ -147,6 +174,7 @@ function handleTouchMove(evt) {
       let datesplit = dateInput.value.split('-');
       getMealInfo(
         schoolCode,
+        officeCode,
         getNextDate(datesplit[0], datesplit[1], datesplit[2]),
       );
       dateInput.value = getDateNStr(datesplit[0], datesplit[1], datesplit[2]);
@@ -155,6 +183,7 @@ function handleTouchMove(evt) {
       let datesplit = dateInput.value.split('-');
       getMealInfo(
         schoolCode,
+        officeCode,
         getPrevDate(datesplit[0], datesplit[1], datesplit[2]),
       );
       dateInput.value = getDatePStr(datesplit[0], datesplit[1], datesplit[2]);
@@ -164,5 +193,4 @@ function handleTouchMove(evt) {
   xDown = null;
   yDown = null;
 }
-
-getMealInfo(schoolCode, getDate());
+getMealInfo(getSchoolQuery(), getOfficeQuery(), getDateQuery());

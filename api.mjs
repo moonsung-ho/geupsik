@@ -1,8 +1,6 @@
-const getMealInfo = (schoolCode, { year, month, date }) => {
+const getMealInfo = (schoolCode, officeCode, { year, month, date }) => {
   let easterEgg = 0;
-  const requestUrl = `https://open.neis.go.kr/hub/mealServiceDietInfo?KEY=4c1690204c08404ca7f1775720f17054&Type=json&pIndex=1&pSize=100&ATPT_OFCDC_SC_CODE=${localStorage.getItem(
-    'officecode',
-  )}&SD_SCHUL_CODE=${schoolCode}&MLSV_YMD=${year}${month}${date}`;
+  const requestUrl = `https://open.neis.go.kr/hub/mealServiceDietInfo?KEY=4c1690204c08404ca7f1775720f17054&Type=json&pIndex=1&pSize=100&ATPT_OFCDC_SC_CODE=${officeCode}&SD_SCHUL_CODE=${schoolCode}&MLSV_YMD=${year}${month}${date}`;
   const today = document.getElementsByClassName('today')[0];
   const kcal = document.getElementsByClassName('zeroKcal')[0];
   const schoolName = document.getElementById('school-name');
