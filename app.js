@@ -30,7 +30,13 @@ function getDateQuery() {
     let dateQuery = params['date'].split('-');
     const year = dateQuery[0];
     const month = dateQuery[1];
+    if (month < 10) {
+      month = `0${month}`;
+    }
     const date = dateQuery[2];
+    if (date < 10) {
+      date = `0${date}`;
+    }
     dateInput.value = `${year}-${month}-${date}`;
     return { year, month, date };
   }
