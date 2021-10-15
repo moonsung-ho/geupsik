@@ -30,13 +30,7 @@ function getDateQuery() {
     let dateQuery = params['date'].split('-');
     const year = dateQuery[0];
     const month = dateQuery[1];
-    if (month < 10) {
-      month = `0${month}`;
-    }
     const date = dateQuery[2];
-    if (date < 10) {
-      date = `0${date}`;
-    }
     dateInput.value = `${year}-${month}-${date}`;
     return { year, month, date };
   }
@@ -92,6 +86,12 @@ function share() {
     shortSchool = shortSchool.replace('서울', '');
   }
   let { year, month, date } = parseDateStr(dateInput.value);
+  if (month < 10) {
+    month = `0${month}`;
+  }
+  if (date < 10) {
+    date = `0${date}`;
+  }
   window.navigator.share({
     text: `${year}년 ${month}월 ${date}일 ${shortSchool} 급식`, // 공유될 설명
     url: `http://급식.ml/?date=${year}-${month}-${date}&schoolcode=${schoolCode}&officecode=${officeCode}`, // 공유될 URL
