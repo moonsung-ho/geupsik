@@ -1,3 +1,11 @@
+body {
+  transition: background 0.7s;
+}
+.search,
+input,
+select {
+  transition: background 0.7s;
+}
 * {
   border: none;
   vertical-align: middle;
@@ -22,6 +30,10 @@ p {
   padding: 5px;
   display: flex;
   margin-top: 7vh;
+  background-color: transparent !important;
+}
+input {
+  border: none;
 }
 button {
   border: 2px solid #000000;
@@ -36,21 +48,28 @@ h1 {
   font-size: smaller;
   text-align: center;
   margin-top: 5vh;
+  width: max-content;
+  height: min-content;
 }
 
 html.dark button {
   border: 2px solid #f1f1f1;
+  color: #000000;
 }
 html.dark button:hover {
   box-shadow: rgba(255, 255, 255, 0.35) 0px 5px 10px;
 }
 html.dark * {
-  background-color: #000000;
   color: #f1f1f1;
 }
 html.dark .search {
   border: 3px solid #f1f1f1;
+  background-color: #000000;
 }
-html.dark .label {
-  background-color: #000839;
+html.dark input,
+html.dark select {
+  background-color: #000000;
+}
+html.dark body {
+  background-color: #000000;
 }
