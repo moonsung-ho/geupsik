@@ -59,7 +59,7 @@ input {
 }
 h1 {
   margin-top: 4vh !important;
-  font-family: 'SBAggroL', Arial, Helvetica, sans-serif;
+  font-family: -apple-system, 'SBAggroL', Arial, Helvetica, sans-serif;
   text-align: center;
 }
 * {
@@ -109,36 +109,36 @@ button {
   border-radius: 30px;
 }
 /*다크모드*/
-  html.dark div {
-    color: #000;
-  }
-  html.dark button {
-    color: #f1f1f1;
-    background: transparent;
-  }
-  html.dark label {
-    color: #f1f1f1;
-  }
-  html.dark footer {
-    color: #f1f1f1;
-    border-top: 1px solid #e2e2e2 !important;
-  }
-  html.dark a {
-    color: #fff !important;
-  }
-  html.dark .input {
-    border: #e2e2e2 1px solid !important;
-    color: #f1f1f1;
-  }
-  html.dark h1 {
-    color: #f1f1f1;
-  }
-  html.dark #school-name {
-    color: #f1f1f1;
-  }
-  html.dark body {
-    background-color: #000000;
-  }
-  html.dark p {
-    color: #f1f1f1;
-  }
+html.dark div {
+  color: #000;
+}
+html.dark button {
+  color: #f1f1f1;
+  background: transparent;
+}
+html.dark label {
+  color: #f1f1f1;
+}
+html.dark footer {
+  color: #f1f1f1;
+  border-top: 1px solid #e2e2e2 !important;
+}
+html.dark a {
+  color: #fff !important;
+}
+html.dark .input {
+  border: #e2e2e2 1px solid !important;
+  color: #f1f1f1;
+}
+html.dark h1 {
+  color: #f1f1f1;
+}
+html.dark #school-name {
+  color: #f1f1f1;
+}
+html.dark body {
+  background-color: #000000;
+}
+html.dark p {
+  color: #f1f1f1;
+}
