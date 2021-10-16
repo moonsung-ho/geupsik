@@ -94,7 +94,7 @@ function share() {
   }
   window.navigator.share({
     text: `${year}년 ${month}월 ${date}일 ${shortSchool} 급식`, // 공유될 설명
-    url: `http://급식.ml/?date=${year}-${month}-${date}&schoolcode=${schoolCode}&officecode=${officeCode}`, // 공유될 URL
+    url: `https://급식.ml/?date=${year}-${month}-${date}&schoolcode=${schoolCode}&officecode=${officeCode}`, // 공유될 URL
   });
 }
 
