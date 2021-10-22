@@ -58,7 +58,7 @@ if (
   agent.indexOf('msie') != -1
 ) {
   console.error('ieieieieieieieieieieieieieieieie');
-  alert('익스플로러 쓰지마세요');
+  swal("익스플로러 쓰지마세요", "error");
   window.location = 'microsoft-edge:' + window.location.href;
 }
 
@@ -116,9 +116,8 @@ if (
   localStorage.getItem('homescreenbanner') !== 'true'
 ) {
   localStorage.setItem('homescreenbanner', 'true');
-  document.getElementsByTagName('footer')[0].innerHTML = `${
-    document.getElementsByTagName('footer')[0].innerHTML
-  }<style>
+  document.getElementsByTagName('footer')[0].innerHTML = `${document.getElementsByTagName('footer')[0].innerHTML
+    }<style>
   @keyframes colorChange{
     0%  { color: #8BC34A;}
     25%  { color: #03A9F4;}

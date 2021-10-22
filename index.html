@@ -1,142 +1,82 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta name="color-scheme" content="dark light" />
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0"
-    />
-    <meta
-      name="description"
-      content="전국 학교의 급식 정보를 제공하는 사이트 | 문성호 제작 | 급식.ml"
-    />
-    <meta name="theme-color" content="#ffffff" />
-    <script type="module" src="/app.js"></script>
-    <title>급식</title>
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-    <meta name="apple-mobile-web-app-title" content="급식" />
-    <meta name="author" content="문성호" />
-    <meta name="reply-to" content="moon7959@kakao.com" />
-    <meta
-      name="keywords"
-      content="급식, 학교, 교육, 교육청, 음식"
-    />
-    <link rel="manifest" href="/manifest.webmanifest" />
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="apple-touch-icon"
-      sizes="57x57"
-      href="./favicons/apple-icon-57x57.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="60x60"
-      href="./favicons/apple-icon-60x60.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="72x72"
-      href="./favicons/apple-icon-72x72.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="76x76"
-      href="./favicons/apple-icon-76x76.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="114x114"
-      href="./favicons/apple-icon-114x114.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="120x120"
-      href="./favicons/apple-icon-120x120.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="144x144"
-      href="./favicons/apple-icon-144x144.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="152x152"
-      href="./favicons/apple-icon-152x152.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="./favicons/apple-icon-180x180.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="192x192"
-      href="./favicons/android-icon-192x192.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./favicons/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="96x96"
-      href="./favicons/favicon-96x96.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="./favicons/favicon-16x16.png"
-    />
-    <link rel="manifest" href="./favicons/manifest.json" />
-    <meta name="msapplication-TileColor" content="#ffffff" />
-    <meta
-      name="msapplication-TileImage"
-      content="./favicons/ms-icon-144x144.png"
-    />
-    <link rel="manifest" href="manifest.json">
 
-<meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="application-name" content="급식">
-<meta name="apple-mobile-web-app-title" content="급식">
-<meta name="theme-color" content="#d5d5d5">
-<meta name="msapplication-navbutton-color" content="#d5d5d5">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="msapplication-starturl" content="/">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<head>
+  <meta name="color-scheme" content="dark light" />
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+  <meta name="description" content="전국 학교의 급식 정보를 제공하는 사이트 | 문성호 제작 | 급식.ml" />
+  <meta name="theme-color" content="#ffffff" />
+  <script type="module" src="/app.js"></script>
+  <title>급식</title>
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta name="apple-mobile-web-app-title" content="급식" />
+  <meta name="author" content="문성호" />
+  <meta name="reply-to" content="moon7959@kakao.com" />
+  <meta name="keywords" content="급식, 학교, 교육, 교육청, 음식" />
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="apple-touch-icon" sizes="57x57" href="./favicons/apple-icon-57x57.png" />
+  <link rel="apple-touch-icon" sizes="60x60" href="./favicons/apple-icon-60x60.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="./favicons/apple-icon-72x72.png" />
+  <link rel="apple-touch-icon" sizes="76x76" href="./favicons/apple-icon-76x76.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="./favicons/apple-icon-114x114.png" />
+  <link rel="apple-touch-icon" sizes="120x120" href="./favicons/apple-icon-120x120.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="./favicons/apple-icon-144x144.png" />
+  <link rel="apple-touch-icon" sizes="152x152" href="./favicons/apple-icon-152x152.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="./favicons/apple-icon-180x180.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="./favicons/android-icon-192x192.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="96x96" href="./favicons/favicon-96x96.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicons/favicon-16x16.png" />
+  <link rel="manifest" href="./favicons/manifest.json" />
+  <meta name="msapplication-TileColor" content="#ffffff" />
+  <meta name="msapplication-TileImage" content="./favicons/ms-icon-144x144.png" />
+  <link rel="manifest" href="manifest.json">
 
-<link rel="icon" sizes="192x192" href="/favicons/android-icon-192x192.png">
-<link rel="apple-touch-icon" sizes="192x192" href="/favicons/android-icon-192x192.png">
-<link rel="icon" sizes="512x512" href="/favicons/android-icon-512x512.png">
-<link rel="apple-touch-icon" sizes="512x512" href="/favicons/android-icon-512x512.png">
-    <link
-      rel="preconnect"
-      href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap"
-    />
-  </head>
-  <body>
-    <button id="sharebutton">🔗</button>
-    <label for="select-date">날짜 선택</label>
-    <button onclick="window.location.href='./first'" id="button">⚙️</button>
-    <br />
-    <input id="select-date" type="date" value="2021-09-09" class="input" />
-    <div id="school-name-div">
-      <b id="school-name"></b>
-    </div>
-    <h1 class="today"><br />급식 정보를 불러오고 있습니다...</h1>
-    <p class="zeroKcal">0 칼로리</p>
-    <footer>
-        개발자에게 <a href="mailto:moon7959@kakao.com">이메일</a> 또는
-        <a href="tel:+821079187959">전화</a>로 문의하세요.</span
-      >
-    </footer>
-  </body>
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="application-name" content="급식">
+  <meta name="apple-mobile-web-app-title" content="급식">
+  <meta name="theme-color" content="#d5d5d5">
+  <meta name="msapplication-navbutton-color" content="#d5d5d5">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="msapplication-starturl" content="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="icon" sizes="192x192" href="/favicons/android-icon-192x192.png">
+  <link rel="apple-touch-icon" sizes="192x192" href="/favicons/android-icon-192x192.png">
+  <link rel="icon" sizes="512x512" href="/favicons/android-icon-512x512.png">
+  <link rel="apple-touch-icon" sizes="512x512" href="/favicons/android-icon-512x512.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css" />
+  <script>
+  alert(window.navigator.userAgent)
+  if (window.navigator.userAgent.match(/MSIE|Internet Explorer|Trident/i)) {
+    window.open("microsoft-edge:" + window.location.href);
+    window.location = 'https://support.microsoft.com/ko-kr/office/%ec%97%b0%ea%b2%b0%ed%95%98%eb%a0%a4%eb%8a%94-%ec%9b%b9-%ec%82%ac%ec%9d%b4%ed%8a%b8%ea%b0%80-internet-explorer%ec%97%90%ec%84%9c-%ec%9e%91%eb%8f%99%ed%95%98%ec%a7%80-%ec%95%8a%ec%8a%b5%eb%8b%88%eb%8b%a4-8f5fc675-cd47-414c-9535-12821ddfc554?ui=ko-kr&rs=ko-kr&ad=kr';
+  }</script>
+</head>
+
+
+<body>
+  <button id="sharebutton">🔗</button>
+  <label for="select-date">날짜 선택</label>
+  <button onclick="window.location.href='./first'" id="button">⚙️</button>
+  <br />
+  <input id="select-date" type="date" value="2021-09-09" class="input" />
+  <div id="school-name-div">
+    <b id="school-name"></b>
+  </div>
+  <h1 class="today"><br />급식 정보를 불러오고 있습니다...</h1>
+  <p class="zeroKcal">0 칼로리</p>
+  <footer>
+    개발자에게 <a href="mailto:moon7959@kakao.com">이메일</a> 또는
+    <a href="tel:+821079187959">전화</a>로 문의하세요.</span>
+  </footer>
+</body>
+
 </html>
