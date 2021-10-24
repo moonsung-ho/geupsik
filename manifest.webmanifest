@@ -8,11 +8,11 @@
   "background_color": "#d5d5d5",
   "icons": [
     {
-      "src": "/favicons/android-icon-192x192.png",
+      "src": "/images/android-icon-192x192.png",
       "sizes": "192x192"
     },
     {
-      "src": "/favicons/android-icon-512x512.png",
+      "src": "/images/android-icon-512x512.png",
       "sizes": "512x512"
     }
   ]

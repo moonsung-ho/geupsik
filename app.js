@@ -76,7 +76,7 @@ document.getElementById('sharebutton').addEventListener('click', async () => {
     console.log('공유 실패' + e);
   }
 });
-function share() {
+function shortenSchoolName() {
   let shortSchool = document
     .getElementById('school-name')
     .innerText.replace(/\🎉/g, '')
@@ -85,6 +85,12 @@ function share() {
   if (shortSchool.includes('초')) {
     shortSchool = shortSchool.replace('서울', '');
   }
+  return shortSchool
+}
+localStorage.setItem("SHORT_SCHOOL_NAME", shortenSchoolName())
+
+function share() {
+  let shortSchool = shortenSchoolName()
   let { year, month, date } = parseDateStr(dateInput.value);
   if (month < 10) {
     month = `0${month}`;
@@ -116,9 +122,8 @@ if (
   localStorage.getItem('homescreenbanner') !== 'true'
 ) {
   localStorage.setItem('homescreenbanner', 'true');
-  document.getElementsByTagName('footer')[0].innerHTML = `${
-    document.getElementsByTagName('footer')[0].innerHTML
-  }<style>
+  document.getElementsByTagName('footer')[0].innerHTML = `${document.getElementsByTagName('footer')[0].innerHTML
+    }<style>
   @keyframes colorChange{
     0%  { color: #8BC34A;}
     25%  { color: #03A9F4;}
