@@ -43,7 +43,7 @@ const getMealInfo = (schoolCode, officeCode, { year, month, date }) => {
           schoolName.onclick = function () {
             easterEgg = easterEgg + 1;
             if (easterEgg * 1 >= 10) {
-              alert('와! 이걸 찾아내셨군요!');
+              swal("무야호!", "success");
             }
           };
         }

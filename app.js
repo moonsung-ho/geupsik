@@ -58,7 +58,7 @@ if (
   agent.indexOf('msie') != -1
 ) {
   console.error('ieieieieieieieieieieieieieieieie');
-  alert('익스플로러 쓰지마세요');
+  swal("익스플로러 쓰지마세요", "error");
   window.location = 'microsoft-edge:' + window.location.href;
 }
 
