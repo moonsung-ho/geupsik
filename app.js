@@ -1,4 +1,4 @@
-import { getSchoolCode, setSchoolCode } from './db.mjs';
+import { getSchoolCode } from './db.mjs';
 import { getDateStr, getDate, parseDateStr } from './utils.mjs';
 import { getMealInfo } from './api.mjs';
 import { printGeupsik } from './printgeupsik.mjs';
