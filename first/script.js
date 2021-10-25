@@ -35,11 +35,9 @@ function get() {
           } else {
             officeName = officeName.substr(0, 2);
           }
-          document.getElementById('select').innerHTML = `${
-            document.getElementById('select').innerHTML
-          }<option>${
-            json['schoolInfo'][1].row[n]['SCHUL_NM']
-          }(${officeName})</option>`;
+          document.getElementById('select').innerHTML = `${document.getElementById('select').innerHTML
+            }<option>${json['schoolInfo'][1].row[n]['SCHUL_NM']
+            }(${officeName})</option>`;
           n = n + 1;
         }
         let schoolCode = json['schoolInfo'][1].row[0]['SD_SCHUL_CODE'];
@@ -119,9 +117,6 @@ selectElement.addEventListener('change', (event) => {
   if (office === '경남') {
     office = '경상남도';
   }
-  console.log(
-    `https://open.neis.go.kr/hub/schoolInfo?SCHUL_NM=${school}&LCTN_SC_NM=${office}&Type=json&KEY=a9a5367947564a1aa13e46ba545de634`,
-  );
   fetch(
     `https://open.neis.go.kr/hub/schoolInfo?SCHUL_NM=${school}&LCTN_SC_NM=${office}&Type=json&KEY=a9a5367947564a1aa13e46ba545de634`,
   )
@@ -129,7 +124,6 @@ selectElement.addEventListener('change', (event) => {
     .then((json) => {
       let schoolCode = json['schoolInfo'][1].row[0]['SD_SCHUL_CODE'];
       let officeCode = json['schoolInfo'][1].row[0]['ATPT_OFCDC_SC_CODE'];
-      console.log(officeCode);
       if (schoolCode) {
         localStorage.setItem('schoolcode', schoolCode);
       }

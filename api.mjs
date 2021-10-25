@@ -1,7 +1,6 @@
 const getMealInfo = (schoolCode, officeCode, { year, month, date }) => {
   document.querySelector("head").innerHTML = document.querySelector("head").innerHTML +
     `<meta property="og:url" content="https://급식.ml/?date=${year}-${month}-${date}&schoolcode=${schoolCode}&officecode=${officeCode}" />`
-  console.log(`https://급식.ml/?date=${year}-${month}-${date}&schoolcode=${schoolCode}&officecode=${officeCode}`)
   let easterEgg = 0;
   const requestUrl = `https://open.neis.go.kr/hub/mealServiceDietInfo?KEY=4c1690204c08404ca7f1775720f17054&Type=json&pIndex=1&pSize=100&ATPT_OFCDC_SC_CODE=${officeCode}&SD_SCHUL_CODE=${schoolCode}&MLSV_YMD=${year}${month}${date}`;
   const today = document.getElementsByClassName('today')[0];
