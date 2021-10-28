@@ -1,9 +1,9 @@
 import { getMealInfo } from './api.mjs';
 import {
   getNextDate,
-  getDateNStr,
+  getNextdateStr,
   getPrevDate,
-  getDatePStr
+  getPrevdateStr
 } from './dates.mjs';
 import { dateInput, schoolCode, officeCode } from './app.js';
 
@@ -42,7 +42,7 @@ function handleTouchMove(evt) {
         officeCode,
         getNextDate(datesplit[0], datesplit[1], datesplit[2])
       );
-      dateInput.value = getDateNStr(datesplit[0], datesplit[1], datesplit[2]);
+      dateInput.value = getNextdateStr(datesplit[0], datesplit[1], datesplit[2]);
     } else {
       /* right swipe */
       let datesplit = dateInput.value.split('-');
@@ -51,7 +51,7 @@ function handleTouchMove(evt) {
         officeCode,
         getPrevDate(datesplit[0], datesplit[1], datesplit[2])
       );
-      dateInput.value = getDatePStr(datesplit[0], datesplit[1], datesplit[2]);
+      dateInput.value = getPrevdateStr(datesplit[0], datesplit[1], datesplit[2]);
     }
   }
   /* reset values */
