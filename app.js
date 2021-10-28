@@ -3,6 +3,12 @@ import { getDateStr, parseDateStr } from './utils.mjs';
 import { getMealInfo } from './api.mjs';
 import { printNASAPicture } from './printNASAPicture.mjs';
 import { getOfficeQuery, getSchoolQuery, getDateQuery } from './getQuery.js';
+import {
+  getNextDate,
+  getNextdateStr,
+  getPrevDate,
+  getPrevdateStr
+} from './dates.mjs';
 
 printNASAPicture();
 
@@ -35,5 +41,30 @@ document.querySelector('#select-date').onchange = function () {
   let dayChosen = parseDateStr(dateInput.value);
   getMealInfo(schoolCode, officeCode, dayChosen);
 };
+
+window.addEventListener('keyup', checkKey);
+function checkKey(e) {
+  if (e.keyCode === 39) {
+    //left
+    let datesplit = dateInput.value.split('-');
+    getMealInfo(
+      schoolCode,
+      officeCode,
+      getNextDate(datesplit[0], datesplit[1], datesplit[2])
+    );
+    dateInput.value = getNextdateStr(datesplit[0], datesplit[1], datesplit[2]);
+  }
+  if (e.keyCode === 37) {
+    //right
+    let datesplit = dateInput.value.split('-');
+    getMealInfo(
+      schoolCode,
+      officeCode,
+      getPrevDate(datesplit[0], datesplit[1], datesplit[2])
+    );
+    dateInput.value = getPrevdateStr(datesplit[0], datesplit[1], datesplit[2]);
+  }
+}
+
 
 getMealInfo(getSchoolQuery(), getOfficeQuery(), getDateQuery());
