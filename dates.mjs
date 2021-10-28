@@ -18,7 +18,7 @@ const getPrevDate = (pyear, pmonth, pdate) => {
   return { year, month, date };
 };
 
-const getDatePStr = (pyear, pmonth, pdate) => {
+const getPrevdateStr = (pyear, pmonth, pdate) => {
   const { year, month, date } = getPrevDate(pyear, pmonth, pdate);
   return `${year}-${month}-${date}`;
 };
@@ -44,9 +44,9 @@ const getNextDate = (nyear, nmonth, ndate) => {
   return { year, month, date };
 };
 
-const getDateNStr = (nyear, nmonth, ndate) => {
+const getNextdateStr = (nyear, nmonth, ndate) => {
   const { year, month, date } = getNextDate(nyear, nmonth, ndate);
   return `${year}-${month}-${date}`;
 };
 
-export { getNextDate, getDateNStr, getPrevDate, getDatePStr };
+export { getNextDate, getNextdateStr, getPrevDate, getPrevdateStr };

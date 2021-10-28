@@ -1,4 +1,4 @@
-const printGeupsik = () => {
+const printNASAPicture = () => {
   let filter = 'win16|win32|win64|mac|macintel';
   if (0 > filter.indexOf(navigator.platform.toLowerCase())) {
   } else {
@@ -17,4 +17,4 @@ const printGeupsik = () => {
       });
   }
 };
-export { printGeupsik };
+export { printNASAPicture };
