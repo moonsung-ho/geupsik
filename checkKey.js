@@ -4,8 +4,8 @@ import {
   getNextdateStr,
   getPrevDate,
   getPrevdateStr
-} from './dates.mjs';
-import { dateInput, schoolCode, officeCode } from './app.js';
+} from './date_utilities.mjs';
+import { dateInput, schoolCode, officeCode } from './start.js';
 
 window.addEventListener('keyup', checkKey);
 function checkKey(e) {
