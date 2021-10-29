@@ -1,19 +1,15 @@
-if (localStorage.getItem('alergy') === 'true') {
-  var mainParent = document.querySelector('.toggle-btn');
-  $(mainParent).addClass('active');
-}
+window.addEventListener("load", () => {
+  if (localStorage.getItem('alergy') === 'true') {
+    $(".checkbox").trigger("click");
+    console.log("start")
+  }
+})
 
-document.querySelector(".cb-value").addEventListener("click", function () {
-  var mainParent = $(this).parent('.toggle-btn');
-  if (document.querySelector(".toggle-btn").getAttribute("class") === "toggle-btn active") {
-    $(mainParent).removeClass('active');
-    localStorage.setItem('alergy', 'false');
-  } else if ($(mainParent).find('input.cb-value').is(':checked')) {
-    $(mainParent).addClass('active');
-    localStorage.setItem('alergy', 'true');
-  } else {
-    $(mainParent).addClass('active');
-    localStorage.setItem('alergy', 'true');
+document.querySelector(".checkbox").addEventListener("click", () => {
+  if (localStorage.getItem("alergy") === "false") {
+    localStorage.setItem("alergy", "true");
+  } else if (localStorage.getItem("alergy") === "true") {
+    localStorage.setItem("alergy", "false");
   }
 })
 

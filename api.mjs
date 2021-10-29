@@ -31,24 +31,24 @@ function removeUnusedThings(str) {
         n++;
       }
       str = str.replaceAll(".", " ");
-      str = str.replaceAll("18", "<span style='color:gray;'>조개류</span>");
-      str = str.replaceAll("17", "<span style='color:gray;'>오징어</span>");
-      str = str.replaceAll("16", "<span style='color:gray;'>쇠고기</span>");
-      str = str.replaceAll("15", "<span style='color:gray;'>닭고기</span>");
-      str = str.replaceAll("14", "<span style='color:gray;'>호두</span>");
-      str = str.replaceAll("13", "<span style='color:gray;'>아황산염</span>");
-      str = str.replaceAll("12", "<span style='color:gray;'>토마토</span>");
-      str = str.replaceAll("11", "<span style='color:gray;'>복숭아</span>");
-      str = str.replaceAll("10", "<span style='color:gray;'>돼지고기</span>");
-      str = str.replaceAll("9", "<span style='color:gray;'>새우</span>");
-      str = str.replaceAll("8", "<span style='color:gray;'>게</span>");
-      str = str.replaceAll("7", "<span style='color:gray;'>고등어</span>");
-      str = str.replaceAll("6", "<span style='color:gray;'>밀</span>");
-      str = str.replaceAll("5", "<span style='color:gray;'>대두</span>");
-      str = str.replaceAll("4", "<span style='color:gray;'>땅콩</span>");
-      str = str.replaceAll("3", "<span style='color:gray;'>메밀</span>");
-      str = str.replaceAll("2", "<span style='color:gray;'>우유</span>");
-      str = str.replaceAll("1", "<span style='color:gray;'>난류</span>");
+      str = str.replaceAll("18", "<span style='font-size:smaller;color:gray;'>조개류</span>");
+      str = str.replaceAll("17", "<span style='font-size:smaller;color:gray;'>오징어</span>");
+      str = str.replaceAll("16", "<span style='font-size:smaller;color:gray;'>쇠고기</span>");
+      str = str.replaceAll("15", "<span style='font-size:smaller;color:gray;'>닭고기</span>");
+      str = str.replaceAll("14", "<span style='font-size:smaller;color:gray;'>호두</span>");
+      str = str.replaceAll("13", "<span style='font-size:smaller;color:gray;'>아황산염</span>");
+      str = str.replaceAll("12", "<span style='font-size:smaller;color:gray;'>토마토</span>");
+      str = str.replaceAll("11", "<span style='font-size:smaller;color:gray;'>복숭아</span>");
+      str = str.replaceAll("10", "<span style='font-size:smaller;color:gray;'>돼지고기</span>");
+      str = str.replaceAll("9", "<span style='font-size:smaller;color:gray;'>새우</span>");
+      str = str.replaceAll("8", "<span style='font-size:smaller;color:gray;'>게</span>");
+      str = str.replaceAll("7", "<span style='font-size:smaller;color:gray;'>고등어</span>");
+      str = str.replaceAll("6", "<span style='font-size:smaller;color:gray;'>밀</span>");
+      str = str.replaceAll("5", "<span style='font-size:smaller;color:gray;'>대두</span>");
+      str = str.replaceAll("4", "<span style='font-size:smaller;color:gray;'>땅콩</span>");
+      str = str.replaceAll("3", "<span style='font-size:smaller;color:gray;'>메밀</span>");
+      str = str.replaceAll("2", "<span style='font-size:smaller;color:gray;'>우유</span>");
+      str = str.replaceAll("1", "<span style='font-size:smaller;color:gray;'>난류</span>");
     }
   }
 }
