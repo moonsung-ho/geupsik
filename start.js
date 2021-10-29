@@ -1,5 +1,5 @@
-import { getSchoolCode } from './db.mjs';
-import { getDateStr, parseDateStr } from './utils.mjs';
+import { getSchoolCode } from './localstorage.mjs';
+import { getDateStr, parseDateStr } from './date_utilities.mjs';
 import { getMealInfo } from './api.mjs';
 import { printNASAPicture } from './printNASAPicture.mjs';
 import { getOfficeQuery, getSchoolQuery, getDateQuery } from './getQuery.js';

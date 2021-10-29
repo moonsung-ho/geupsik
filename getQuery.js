@@ -1,6 +1,6 @@
-import { getSchoolCode } from './db.mjs';
-import { getDate } from './utils.mjs';
-import { params, dateInput } from './app.js';
+import { getSchoolCode } from './localstorage.mjs';
+import { getDate } from './date_utilities.mjs';
+import { params, dateInput } from './start.js';
 
 export function getSchoolQuery() {
   if (params['schoolcode'] != undefined) {
