@@ -1,3 +1,22 @@
+if (localStorage.getItem('alergy') === 'true') {
+  var mainParent = document.querySelector('.toggle-btn');
+  $(mainParent).addClass('active');
+}
+
+document.querySelector(".cb-value").addEventListener("click", function () {
+  var mainParent = $(this).parent('.toggle-btn');
+  if (document.querySelector(".toggle-btn").getAttribute("class") === "toggle-btn active") {
+    $(mainParent).removeClass('active');
+    localStorage.setItem('alergy', 'false');
+  } else if ($(mainParent).find('input.cb-value').is(':checked')) {
+    $(mainParent).addClass('active');
+    localStorage.setItem('alergy', 'true');
+  } else {
+    $(mainParent).addClass('active');
+    localStorage.setItem('alergy', 'true');
+  }
+})
+
 function get() {
   let school = document.getElementById('school').value;
   fetch(

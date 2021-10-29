@@ -4,6 +4,12 @@ import { getMealInfo } from './api.mjs';
 import { printNASAPicture } from './printNASAPicture.mjs';
 import { getOfficeQuery, getSchoolQuery, getDateQuery } from './getQuery.js';
 
+export let schoolCode = getSchoolCode();
+export let officeCode = localStorage.getItem('officecode');
+if (!schoolCode && getOfficeQuery() === localStorage.getItem('officecode')) {
+  location.href = '/first';
+}
+
 printNASAPicture();
 
 //url params
@@ -14,12 +20,6 @@ export const params = Object.fromEntries(urlSearchParams.entries());
 //다크모드 감지
 if (localStorage.getItem('theme') === 'dark') {
   document.documentElement.classList.toggle('dark');
-}
-
-export let schoolCode = getSchoolCode();
-export let officeCode = localStorage.getItem('officecode');
-if (!schoolCode && getOfficeQuery() === localStorage.getItem('officecode')) {
-  location.href = '/first';
 }
 
 if ('serviceWorker' in navigator) {

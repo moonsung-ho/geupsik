@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ko">
   <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,10 +9,7 @@
     <meta property="og:title" content="급식" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://급식.ml/first" />
-    <meta
-      property="og:image"
-      content="/images/intro-image.jpeg"
-    />
+    <meta property="og:image" content="/images/intro-image.jpeg" />
     <meta
       name="description"
       content="전국 학교의 급식 정보를 제공하는 사이트 | 문성호 제작 | 급식.ml"
@@ -83,6 +81,12 @@
     </div>
     <input type="checkbox" id="toggle" class="input" />
     <label onclick="darkModeToggle()" for="toggle" class="label"></label>
+    <br>
+    <label for="toggle-btn">알레르기 정보 표시</label>
+    <div class="toggle-btn">
+      <input type="checkbox" class="cb-value" id="toggle-btn" />
+      <span class="round-btn"></span>
+    </div>
     <button onclick="location.href = '/'">나가기</button>
     <p>문성호</p>
     <script src="/first/script.js"></script>
