@@ -26,8 +26,8 @@ function removeUnusedThings(str) {
         return item !== null && item !== undefined && item !== '';
       });
       let n = 0;
-      while (n + 1 < menus.length) {
-        str = str.replace(menus[n], menus[n] + '<br>-');
+      while (n < menus.length) {
+        str = str.replace(menus[n], menus[n] + "<span style='font-size:smaller;color:gray;'><br>-</span>");
         n++;
       }
       str = str.replaceAll(".", " ");
