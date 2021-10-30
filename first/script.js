@@ -7,7 +7,7 @@ window.addEventListener("load", () => {
 })
 
 document.querySelector(".checkbox").addEventListener("click", () => {
-  if (localStorage.getItem("alergy") === "false") {
+  if (localStorage.getItem("alergy") === "false" || !localStorage.getItem("alergy")) {
     localStorage.setItem("alergy", "true");
   } else if (localStorage.getItem("alergy") === "true") {
     localStorage.setItem("alergy", "false");
