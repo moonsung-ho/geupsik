@@ -20,6 +20,7 @@ function removeUnusedThings(str) {
       ); //숫자 제거
       str = str.replace(/\./g, ''); // 불필요한 마침표 제거
     } else if (localStorage.getItem("alergy") === 'true') {
+      document.getElementsByClassName('zeroKcal')[0].style.display = 'none';
       console.log(str);
       let menus = str.replaceAll(".", "").split(/[0-9]/g);
       menus = menus.filter(function (item) {
