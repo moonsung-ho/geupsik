@@ -13,6 +13,7 @@ document.querySelector(".checkbox").addEventListener("click", () => {
   }
 })
 
+
 function get() {
   let school = document.getElementById('school').value;
   fetch(

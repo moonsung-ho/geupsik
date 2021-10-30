@@ -86,6 +86,7 @@ const getMealInfo = (schoolCode, officeCode, { year, month, date }) => {
       else {
         let meal = json['mealServiceDietInfo'][1].row[0].DDISH_NM
         meal = removeUnusedThings(meal);
+        let index = 0;
         //급식 정보 출력
         document.title = `${json['mealServiceDietInfo'][1].row[0].SCHUL_NM}의 급식`;
         mealElement.innerHTML = meal;
