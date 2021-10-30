@@ -1,6 +1,7 @@
 window.addEventListener("load", () => {
   if (localStorage.getItem('alergy') === 'true') {
     $(".checkbox").trigger("click");
+    localStorage.setItem('alergy', 'true');  
     console.log("start")
   }
 })

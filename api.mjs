@@ -80,7 +80,7 @@ const getMealInfo = (schoolCode, officeCode, { year, month, date }) => {
         (mealElement.innerHTML = `<br>급식이 <br>없는 날입니다.`),
           (document.title = `급식`);
         kcalElement.innerText = ``;
-        document.getElementById('school-name-div').style.display = 'none';
+        schoolNameElement.innerText = localStorage.getItem('schoolname');
       }
       //급식이 있을 경우
       else {
@@ -95,7 +95,8 @@ const getMealInfo = (schoolCode, officeCode, { year, month, date }) => {
           'mealServiceDietInfo'
         ][1].row[0].CAL_INFO.replace('Kcal', '칼로리')}`;
         //학교 이름 출력
-        schoolNameElement.innerText = `${json['mealServiceDietInfo'][1].row[0].SCHUL_NM}`;
+        localStorage.setItem('schoolname', json['mealServiceDietInfo'][1].row[0].SCHUL_NM);
+        schoolNameElement.innerHTML = `${json['mealServiceDietInfo'][1].row[0].SCHUL_NM}`;
         //이스터 에그
         if (
           json['mealServiceDietInfo'][1].row[0].SCHUL_NM === '서울은평초등학교'
