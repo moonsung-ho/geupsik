@@ -63,6 +63,12 @@ input {
   user-select: none;
   background: transparent;
 }
+span {
+  font-size: small !important;
+  color: gray;
+  margin: 0px;
+  padding: 0px;
+}
 h1 {
   margin-top: 4vh !important;
   font-family: -apple-system, 'SBAggroL', Arial, Helvetica, sans-serif;

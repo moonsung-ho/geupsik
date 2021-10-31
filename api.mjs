@@ -7,9 +7,10 @@ function removeUnusedThings(str) {
       str.slice(str.indexOf('밥') + 1, str.length);
   }
   //밥 뒤에 이모지 표시
-  displayAlergy();
-  str = str.  replace(/\*/g, ''); //별표 제거
+  
+  str = str.replace(/\*/g, ''); //별표 제거
   str = str.replace('()', ''); // 빈 괄호는 표시 X
+  displayAlergy();
   return str;
 
   function displayAlergy() {
@@ -28,28 +29,28 @@ function removeUnusedThings(str) {
       });
       let n = 0;
       while (n < menus.length) {
-        str = str.replace(menus[n], menus[n] + "<span style='font-size:small;color:gray;'><br>-</span>");
+        str = str.replace(menus[n], menus[n] + "<span>  - </span>");
         n++;
       }
       str = str.replaceAll(".", " ");
-      str = str.replaceAll("18", "<span style='font-size:small;color:gray;'>조개류</span>");
-      str = str.replaceAll("17", "<span style='font-size:small;color:gray;'>오징어</span>");
-      str = str.replaceAll("16", "<span style='font-size:small;color:gray;'>쇠고기</span>");
-      str = str.replaceAll("15", "<span style='font-size:small;color:gray;'>닭고기</span>");
-      str = str.replaceAll("14", "<span style='font-size:small;color:gray;'>호두</span>");
-      str = str.replaceAll("13", "<span style='font-size:small;color:gray;'>아황산염</span>");
-      str = str.replaceAll("12", "<span style='font-size:small;color:gray;'>토마토</span>");
-      str = str.replaceAll("11", "<span style='font-size:small;color:gray;'>복숭아</span>");
-      str = str.replaceAll("10", "<span style='font-size:small;color:gray;'>돼지고기</span>");
-      str = str.replaceAll("9", "<span style='font-size:small;color:gray;'>새우</span>");
-      str = str.replaceAll("8", "<span style='font-size:small;color:gray;'>게</span>");
-      str = str.replaceAll("7", "<span style='font-size:small;color:gray;'>고등어</span>");
-      str = str.replaceAll("6", "<span style='font-size:small;color:gray;'>밀</span>");
-      str = str.replaceAll("5", "<span style='font-size:small;color:gray;'>대두</span>");
-      str = str.replaceAll("4", "<span style='font-size:small;color:gray;'>땅콩</span>");
-      str = str.replaceAll("3", "<span style='font-size:small;color:gray;'>메밀</span>");
-      str = str.replaceAll("2", "<span style='font-size:small;color:gray;'>우유</span>");
-      str = str.replaceAll("1", "<span style='font-size:small;color:gray;'>난류</span>");
+      str = str.replaceAll("18", "<span>조개류</span>");
+      str = str.replaceAll("17", "<span>오징어</span>");
+      str = str.replaceAll("16", "<span>쇠고기</span>");
+      str = str.replaceAll("15", "<span>닭고기</span>");
+      str = str.replaceAll("14", "<span>호두</span>");
+      str = str.replaceAll("13", "<span>아황산염</span>");
+      str = str.replaceAll("12", "<span>토마토</span>");
+      str = str.replaceAll("11", "<span>복숭아</span>");
+      str = str.replaceAll("10", "<span>돼지고기</span>");
+      str = str.replaceAll("9", "<span>새우</span>");
+      str = str.replaceAll("8", "<span>게</span>");
+      str = str.replaceAll("7", "<span>고등어</span>");
+      str = str.replaceAll("6", "<span>밀</span>");
+      str = str.replaceAll("5", "<span>대두</span>");
+      str = str.replaceAll("4", "<span>땅콩</span>");
+      str = str.replaceAll("3", "<span>메밀</span>");
+      str = str.replaceAll("2", "<span>우유</span>");
+      str = str.replaceAll("1", "<span>난류</span>");
     }
   }
 }
@@ -82,7 +83,7 @@ const getMealInfo = (schoolCode, officeCode, { year, month, date }) => {
           (document.title = `급식`);
         kcalElement.innerText = ``;
         schoolNameElement.innerText = localStorage.getItem('schoolname');
-        document.title = localStorage.getItem('schoolname' + "의 급식");
+        document.title = localStorage.getItem('schoolname') + "의 급식";
       }
       //급식이 있을 경우
       else {
