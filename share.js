@@ -29,10 +29,10 @@ function share() {
   let shortSchool = shortenSchoolName();
   let { year, month, date } = parseDateStr(dateInput.value);
   if (month < 10) {
-    month = `0${month}`;
+    month = `${month}`;
   }
   if (date < 10) {
-    date = `0${date}`;
+    date = `${date}`;
   }
   window.navigator.share({
     text: `${year}년 ${month}월 ${date}일 ${shortSchool} 급식`,
