@@ -1,5 +1,5 @@
 function removeUnusedThings(str) {
-  str = str.replace('우유2.', ''); // 우유는 표시 X
+  //str = str.replace('우유2.', ''); // 우유는 표시 X
   if (str.includes('밥')) {
     str =
       str.slice(0, str.indexOf('밥') + 1) +
@@ -89,6 +89,7 @@ const getMealInfo = (schoolCode, officeCode, { year, month, date }) => {
       else {
         let meal = json['mealServiceDietInfo'][1].row[0].DDISH_NM
         meal = removeUnusedThings(meal);
+        meal = meal.replace("우유<span>  - </span><span>우유</span>", "")
         let index = 0;
         //급식 정보 출력
         document.title = `${json['mealServiceDietInfo'][1].row[0].SCHUL_NM}의 급식`;
