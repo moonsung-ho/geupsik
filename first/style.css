@@ -7,12 +7,11 @@ select {
   transition: background 0.7s;
 }
 * {
-  border: none;
   vertical-align: middle;
+  border: none;
   margin: 5px;
   margin: 0 auto;
   text-align: center;
-  white-space: nowrap;
 }
 p {
   text-align: right;
@@ -80,7 +79,7 @@ html.dark body {
 
 body {
   position: relative;
-  height: 99vh;
+  height: 100vh;
 }
 body:before {
   content: '';
@@ -109,6 +108,9 @@ body:before {
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#ff512f", endColorstr="#00ffffff",GradientType=1 );
   /* IE6-9 fallback on horizontal gradient */
+}
+span {
+  margin-bottom: 100px !important;
 }
 body .toggles label#togglelabel {
   font-size: 1em;
@@ -169,7 +171,6 @@ body .toggles .slider.round:before {
 }
 body h1 {
   color: #fff;
-  position: absolute;
   bottom: 0;
   background: #ff512f;
   padding: 0.5em;
