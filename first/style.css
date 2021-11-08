@@ -1,4 +1,11 @@
-@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/"Pretendard-Regular".woff')
+    format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
 body {
   transition: background 0.7s;
 }
@@ -8,7 +15,7 @@ select {
   transition: background 0.7s;
 }
 * {
-  font-family: "Spoqa Han Sans Neo";
+  font-family: 'Pretendard-Regular' !important;
   vertical-align: middle;
   border: none;
   margin: 5px;
