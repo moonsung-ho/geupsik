@@ -1,10 +1,4 @@
-@font-face {
-  font-family: 'Pretendard-Regular';
-  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/"Pretendard-Regular".woff')
-    format('woff');
-  font-weight: 400;
-  font-style: normal;
-}
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css');
 @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
 
 * {
@@ -74,12 +68,12 @@ span {
 }
 h1 {
   margin-top: 4vh !important;
-  font-family: 'Pretendard-Regular', "Spoqa Han Sans Neo";
+  font-family: 'Pretendard Variable', 'Spoqa Han Sans Neo';
   text-align: center;
-  font-weight: 300;
+  font-weight: 200;
 }
 span {
-  font-family: "Spoqa Han Sans Neo";
+  font-family: 'Spoqa Han Sans Neo';
 }
 #school-name {
   font-size: smaller;
@@ -154,4 +148,7 @@ html.dark body {
 }
 html.dark p {
   color: #f1f1f1;
+}
+html.dark ::-webkit-calendar-picker-indicator {
+  filter: invert(1);
 }

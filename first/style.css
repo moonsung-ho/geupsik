@@ -1,10 +1,4 @@
-@font-face {
-  font-family: 'Pretendard-Regular';
-  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/"Pretendard-Regular".woff')
-    format('woff');
-  font-weight: 400;
-  font-style: normal;
-}
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css');
 
 body {
   transition: background 0.7s;
@@ -15,7 +9,7 @@ select {
   transition: background 0.7s;
 }
 * {
-  font-family: 'Pretendard-Regular' !important;
+  font-family: 'Pretendard Variable' !important;
   vertical-align: middle;
   border: none;
   margin: 5px;
