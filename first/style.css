@@ -1,3 +1,4 @@
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
 body {
   transition: background 0.7s;
 }
@@ -7,6 +8,7 @@ select {
   transition: background 0.7s;
 }
 * {
+  font-family: "Spoqa Han Sans Neo";
   vertical-align: middle;
   border: none;
   margin: 5px;
