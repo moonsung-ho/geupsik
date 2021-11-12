@@ -5,6 +5,19 @@ if (typeof navigator.share === 'undefined') {
   // 공유하기 버튼을 지원하지 않는 경우에 대한 폴백 처리
   document.getElementById('sharebutton').disabled = true;
   document.getElementById('sharebutton').innerHTML = 'ㅤ';
+} else {
+  Toastify({
+    text: "🔗 버튼을 눌러서 오늘의 급식 메뉴를 공유해 보세요",
+    duration: 3000,
+    close: true,
+    gravity: "top", // `top` or `bottom`
+    position: "center", // `left`, `center` or `right`
+    stopOnFocus: false, // Prevents dismissing of toast on hover
+    style: {
+      background: "wheat",
+    },
+    onClick: function () {share()} // Callback after click
+  }).showToast();
 }
 document.getElementById('sharebutton').addEventListener('click', async () => {
   try {
