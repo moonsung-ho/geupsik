@@ -6,18 +6,20 @@ if (typeof navigator.share === 'undefined') {
   document.getElementById('sharebutton').disabled = true;
   document.getElementById('sharebutton').innerHTML = 'ㅤ';
 } else {
-  Toastify({
-    text: "🔗 버튼을 눌러서 오늘의 급식 메뉴를 공유해 보세요",
-    duration: 3000,
-    close: true,
-    gravity: "top", // `top` or `bottom`
-    position: "center", // `left`, `center` or `right`
-    stopOnFocus: false, // Prevents dismissing of toast on hover
-    style: {
-      background: "wheat",
-    },
-    onClick: function () {share()} // Callback after click
-  }).showToast();
+  if (Math.random() * (3 - 1) + 1 === 3) {
+    Toastify({
+      text: "🔗 버튼을 눌러서 오늘의 급식 메뉴를 공유해 보세요",
+      duration: 3000,
+      close: true,
+      gravity: "top", // `top` or `bottom`
+      position: "center", // `left`, `center` or `right`
+      stopOnFocus: false, // Prevents dismissing of toast on hover
+      style: {
+        background: "wheat",
+      },
+      onClick: function () { share() } // Callback after click
+    }).showToast();
+  }
 }
 document.getElementById('sharebutton').addEventListener('click', async () => {
   try {
