@@ -7,6 +7,21 @@ import { getOfficeQuery, getSchoolQuery, getDateQuery } from './getQuery.js';
 export let schoolCode = getSchoolCode();
 export let officeCode = localStorage.getItem('officecode');
 
+if (location.host.includes('급식')) {
+  Toastify({
+    text: "이 도메인은 이제 사용되지 않습니다. 이 팝업을 클릭하면 새로 바뀐 도메인으로 이동합니다.",
+    duration: 3000,
+    close: true,
+    gravity: "top", // `top` or `bottom`
+    position: "center", // `left`, `center` or `right`
+    stopOnFocus: false, // Prevents dismissing of toast on hover
+    style: {
+      background: "tomato",
+    },
+    onClick: function () { location.href = "https://geupsik.ml" } // Callback after click
+  }).showToast();
+}
+
 printNASAPicture();
 
 //url params

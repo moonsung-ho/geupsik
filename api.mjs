@@ -61,7 +61,7 @@ const getMealInfo = (schoolCode, officeCode, { year, month, date }) => {
   let meta = document.createElement('meta');
   meta.property = "og:url";
   meta.id = "og-url";
-  meta.content = `https://급식.ml/?date=${year}-${month}-${date}&schoolcode=${schoolCode}&officecode=${officeCode}`;
+  meta.content = `${location.protocol}//${location.host}/?date=${year}-${month}-${date}&schoolcode=${schoolCode}&officecode=${officeCode}`;
   //이미 있던 태그 삭제
   if (document.getElementById('og-url')) {
     document.getElementById('og-url').remove();
