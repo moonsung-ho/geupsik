@@ -23,3 +23,16 @@ if (isIos() &&
     onClick: function () { share() } // Callback after click
   }).showToast();
 }
+
+const changeFavicon = link => {
+  let $favicon = document.createElement("link")
+  $favicon.rel = "icon"
+  $favicon.href = link
+  document.head.appendChild($favicon)
+}
+
+
+if (isIos()) {
+  console.log('ios')
+  changeFavicon(`${location.protocol}//${location.host}/images/icon-512.png/`)
+}
