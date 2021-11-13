@@ -1,5 +1,5 @@
 function removeUnusedThings(str) {
-  //str = str.replace('우유2.', ''); // 우유는 표시 X
+  str = str.replace('우유2.', ''); // 우유는 표시 X
   if (str.includes('밥')) {
     str =
       str.slice(0, str.indexOf('밥') + 1) +
