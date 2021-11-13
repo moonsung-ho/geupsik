@@ -25,7 +25,18 @@ document.getElementById('sharebutton').addEventListener('click', async () => {
   try {
     share();
   } catch (e) {
-    console.log('공유 실패' + e);
+    Toastify({
+      text: "공유 실패",
+      duration: 3000,
+      close: true,
+      gravity: "top", // `top` or `bottom`
+      position: "center", // `left`, `center` or `right`
+      stopOnFocus: false, // Prevents dismissing of toast on hover
+      style: {
+        background: "tomato",
+      },
+      onClick: function () { share() } // Callback after click
+    }).showToast();
   }
 });
 function shortenSchoolName() {
