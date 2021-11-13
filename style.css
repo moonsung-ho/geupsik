@@ -8,6 +8,9 @@
   font-size: 30px;
   text-align: center;
 }
+.toastify {
+  border-radius: 0.4rem !important;
+}
 label {
   font-size: small;
   padding-top: 0.1vh !important;
