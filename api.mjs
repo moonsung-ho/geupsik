@@ -7,7 +7,7 @@ function removeUnusedThings(str) {
       str.slice(str.indexOf('밥') + 1, str.length);
   }
   //밥 뒤에 이모지 표시
-  
+
   str = str.replace(/\*/g, ''); //별표 제거
   str = str.replace('()', ''); // 빈 괄호는 표시 X
   displayAlergy();
@@ -115,14 +115,19 @@ const getMealInfo = (schoolCode, officeCode, { year, month, date }) => {
       }
     })
     .catch((err) => {
-      console.log(err);
-      let errorConfirm = confirm(
-        '에러가 발생했습니다. "확인" 버튼을 누르면 자동으로 새로고침 됩니다.' +
-        err,
-      );
-      if (errorConfirm === true) {
-        location.reload();
-      }
+      console.error(err);
+      Toastify({
+        text: "에러가 발생했습니다.",
+        duration: 3000,
+        close: true,
+        gravity: "top", // `top` or `bottom`
+        position: "center", // `left`, `center` or `right`
+        stopOnFocus: false, // Prevents dismissing of toast on hover
+        style: {
+          background: "tomato",
+        },
+        onClick: function () { location.reload() } // Callback after click
+      }).showToast();
     });
 };
 export { getMealInfo, removeUnusedThings };

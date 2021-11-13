@@ -20,6 +20,6 @@ if (isIos() &&
     style: {
       background: "wheat",
     },
-    onClick: function () { share() } // Callback after click
+    onClick: function () {} // Callback after click
   }).showToast();
 }

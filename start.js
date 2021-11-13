@@ -4,10 +4,6 @@ import { getMealInfo } from './api.mjs';
 import { printNASAPicture } from './printNASAPicture.mjs';
 import { getOfficeQuery, getSchoolQuery, getDateQuery } from './getQuery.js';
 
-if (!localStorage.getItem('schoolcode')) {
-  location.href = './first';
-}
-
 export let schoolCode = getSchoolCode();
 export let officeCode = localStorage.getItem('officecode');
 
