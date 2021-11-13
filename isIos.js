@@ -34,6 +34,6 @@ const changeFavicon = link => {
 
 if (isIos()) {
   console.log('ios')
-  changeFavicon(`${location.protocol}//${location.host}/images/icon-512.png`)
-  console.log(`${location.protocol}//${location.host}/images/icon-512.png`)
+  changeFavicon(`${location.protocol}//${location.host}/images/icon-512.ico`)
+  console.log(`${location.protocol}//${location.host}/images/icon-512.ico`)
 }
