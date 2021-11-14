@@ -24,7 +24,8 @@ export function getDateQuery() {
     const date = dateQuery[2];
     dateInput.value = `${year}-${month}-${date}`;
     return { year, month, date };
-  } 
-  console.log(params);
+  } else if (localStorage.getItem("schoolcode") === null) {
+    location.href = '/first';
+  }
   return getDate();
 }
