@@ -6,7 +6,7 @@ if (typeof navigator.share === 'undefined') {
   document.getElementById('sharebutton').disabled = true;
   document.getElementById('sharebutton').innerHTML = 'ㅤ';
 } else {
-  if (Math.random() * (3 - 1) + 1 <= 2) {
+  if (Math.random() * (7 - 1) + 1 <= 2) {
     Toastify({
       text: "🔗 버튼을 눌러서 오늘의 급식 메뉴를 공유해 보세요",
       duration: 3000,
