@@ -1,4 +1,5 @@
-@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css');
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-dynamic-subset.css');
+
 @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
 
 * {
@@ -7,6 +8,7 @@
     sans-serif;
   font-size: 30px;
   text-align: center;
+  font-display: swap;
 }
 .toastify {
   border-radius: 0.4rem !important;
@@ -71,7 +73,7 @@ span {
 }
 h1 {
   margin-top: 4vh !important;
-  font-family: 'Pretendard Variable', 'Spoqa Han Sans Neo';
+  font-family: 'Pretendard', 'Spoqa Han Sans Neo';
   text-align: center;
   font-weight: 200;
 }
