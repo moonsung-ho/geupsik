@@ -17,7 +17,7 @@ export function getOfficeQuery() {
   return localStorage.getItem('officecode');
 }
 export function getDateQuery() {
-  if (params['date'] !== undefined) {
+  if (params.date !== undefined) {
     let dateQuery = params['date'].split('-');
     const year = dateQuery[0];
     const month = dateQuery[1];
