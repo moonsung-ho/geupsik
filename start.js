@@ -7,6 +7,10 @@ import { getOfficeQuery, getSchoolQuery, getDateQuery } from './getQuery.js';
 export let schoolCode = getSchoolCode();
 export let officeCode = localStorage.getItem('officecode');
 
+if (document.querySelector("html").className === "dark") {
+  document.querySelector("#github").innerHTML = '<a href="https://github.com/sungho0205/geupsik"><img src="images/github.png" alt="깃허브"></a>'
+}
+
 if (location.host.includes('xn--kj0b080b')) {
   Toastify({
     text: "이 도메인은 이제 사용되지 않습니다. 이 팝업을 클릭하면 새로 바뀐 도메인으로 이동합니다.",
