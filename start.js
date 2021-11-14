@@ -29,11 +29,6 @@ export let dateInput = document.querySelector('#select-date');
 const urlSearchParams = new URLSearchParams(window.location.search);
 export const params = Object.fromEntries(urlSearchParams.entries());
 
-//다크모드 감지
-if (localStorage.getItem('theme') === 'dark') {
-  document.documentElement.classList.toggle('dark');
-}
-
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('service-worker.js');
 }

@@ -128,6 +128,11 @@
       type="text/css"
       href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
     />
+    <script>
+      if (localStorage.getItem('theme') === 'dark') {
+        document.documentElement.classList.toggle('dark');
+      }
+    </script>
   </head>
 
   <body>
