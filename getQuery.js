@@ -27,5 +27,6 @@ export function getDateQuery() {
   } else if (localStorage.getItem("schoolcode") === null) {
     location.href = '/first';
   }
+  console.log(params);
   return getDate();
 }
