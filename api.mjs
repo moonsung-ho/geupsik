@@ -120,7 +120,7 @@ const getMealInfo = (schoolCode, officeCode, { year, month, date }) => {
         text: "에러가 발생했습니다.",
         duration: 3000,
         close: true,
-        gravity: "top", // `top` or `bottom`
+        gravity: "bottom", // `top` or `bottom`
         position: "center", // `left`, `center` or `right`
         stopOnFocus: false, // Prevents dismissing of toast on hover
         style: {

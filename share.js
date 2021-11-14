@@ -11,7 +11,7 @@ if (typeof navigator.share === 'undefined') {
       text: "🔗 버튼을 눌러서 오늘의 급식 메뉴를 공유해 보세요",
       duration: 3000,
       close: true,
-      gravity: "top", // `top` or `bottom`
+      gravity: "bottom", // `top` or `bottom`
       position: "center", // `left`, `center` or `right`
       stopOnFocus: false, // Prevents dismissing of toast on hover
       style: {
@@ -29,7 +29,7 @@ document.getElementById('sharebutton').addEventListener('click', async () => {
       text: "공유 실패",
       duration: 3000,
       close: true,
-      gravity: "top", // `top` or `bottom`
+      gravity: "bottom", // `top` or `bottom`
       position: "center", // `left`, `center` or `right`
       stopOnFocus: false, // Prevents dismissing of toast on hover
       style: {

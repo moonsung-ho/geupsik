@@ -14,7 +14,7 @@ if (isIos() &&
     text: "아래 있는 공유 버튼을 눌러서 앱을 홈 화면에 추가해 보세요",
     duration: 3000,
     close: true,
-    gravity: "top", // `top` or `bottom`
+    gravity: "bottom", // `top` or `bottom`
     position: "center", // `left`, `center` or `right`
     stopOnFocus: false, // Prevents dismissing of toast on hover
     style: {
