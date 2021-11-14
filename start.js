@@ -29,10 +29,6 @@ export let dateInput = document.querySelector('#select-date');
 const urlSearchParams = new URLSearchParams(window.location.search);
 export const params = Object.fromEntries(urlSearchParams.entries());
 
-if (localStorage.getItem("schoolcode") === null) {
-  location.href = "/first";
-}
-
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('service-worker.js');
 }
