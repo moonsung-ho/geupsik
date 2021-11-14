@@ -62,6 +62,11 @@ span {
   margin: 0px;
   padding: 0px;
 }
+#badge {
+  height: 13px;
+  margin-top: 3.5px;
+  margin-left: 10px !important;
+}
 #github {
   position: absolute;
   margin-right: 3px;
