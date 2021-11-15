@@ -1,3 +1,5 @@
+import findBirthday from './displaybirthday.js';
+
 function removeUnusedThings(str) {
   str = str.replace('우유2.', ''); // 우유는 표시 X
   if (str.includes('밥')) {
@@ -55,6 +57,8 @@ function removeUnusedThings(str) {
   }
 }
 const getMealInfo = (schoolCode, officeCode, { year, month, date }) => {
+  const input = document.querySelector('#select-date');
+  findBirthday({ month: input.value.split('-')[1], day: input.value.split('-')[2] })
   //이스터에그
   let easterEgg = 0;
   //og 링크 설정
