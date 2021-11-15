@@ -1,4 +1,4 @@
-import findBirthday from './displaybirthday.js';
+import findBirthday from './displaybirthday.mjs';
 
 function removeUnusedThings(str) {
   str = str.replace('우유2.', ''); // 우유는 표시 X
