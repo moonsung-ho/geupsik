@@ -161,6 +161,3 @@ html.dark p {
 html.dark ::-webkit-calendar-picker-indicator {
   filter: invert(1);
 }
-html.dark .toastify {
-  color: #fff;
-}
