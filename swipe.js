@@ -37,22 +37,22 @@ function handleTouchMove(evt) {
     if (xDiff > 0) {
       /* left swipe */
       let datesplit = dateInput.value.split('-');
+      dateInput.value = getNextdateStr(datesplit[0], datesplit[1], datesplit[2]);
       getMealInfo(
         schoolCode,
         officeCode,
         getNextDate(datesplit[0], datesplit[1], datesplit[2])
       );
-      dateInput.value = getNextdateStr(datesplit[0], datesplit[1], datesplit[2]);
       window.history.pushState({}, document.title, `?date=${dateInput.value}&schoolcode=${schoolCode}&officecode=${officeCode}`);
     } else {
       /* right swipe */
       let datesplit = dateInput.value.split('-');
+      dateInput.value = getPrevdateStr(datesplit[0], datesplit[1], datesplit[2]);
       getMealInfo(
         schoolCode,
         officeCode,
         getPrevDate(datesplit[0], datesplit[1], datesplit[2])
       );
-      dateInput.value = getPrevdateStr(datesplit[0], datesplit[1], datesplit[2]);
       window.history.pushState({}, document.title, `?date=${dateInput.value}&schoolcode=${schoolCode}&officecode=${officeCode}`);
     }
   }
