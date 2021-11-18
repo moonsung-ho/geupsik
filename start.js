@@ -3,6 +3,7 @@ import { getDateStr, parseDateStr } from './date_utilities.mjs';
 import { getMealInfo } from './api.mjs';
 import { printNASAPicture } from './printNASAPicture.mjs';
 import { getOfficeQuery, getSchoolQuery, getDateQuery } from './getQuery.js';
+import toast from './toast.js';
 
 export let schoolCode = getSchoolCode();
 export let officeCode = localStorage.getItem('officecode');
@@ -12,18 +13,7 @@ if (document.querySelector("html").className === "dark") {
 }
 
 if (location.host.includes('xn--kj0b080b')) {
-  Toastify({
-    text: "이 도메인은 이제 사용되지 않습니다. 이 팝업을 클릭하면 새로 바뀐 도메인으로 이동합니다.",
-    duration: 6000,
-    close: true,
-    gravity: "bottom", // `top` or `bottom`
-    position: "center", // `left`, `center` or `right`
-    stopOnFocus: false, // Prevents dismissing of toast on hover
-    style: {
-      background: "tomato",
-    },
-    onClick: function () { location.href = "https://geupsik.ml" } // Callback after click
-  }).showToast();
+  toast("이 도메인은 이제 사용되지 않습니다. 이 팝업을 클릭하면 새로 바뀐 도메인으로 이동합니다.", 6000, "tomato")
 }
 
 printNASAPicture();
