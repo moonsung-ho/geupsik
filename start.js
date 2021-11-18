@@ -43,9 +43,9 @@ let geupsik = localStorage.getItem('geupsik');
 localStorage.setItem('geupsik', geupsik * 1 + 1);
 
 document.querySelector('#select-date').onchange = function () {
-  /*let dayChosen = parseDateStr(dateInput.value);
-  getMealInfo(schoolCode, officeCode, dayChosen);*/
-  location.href = `${location.protocol}//${location.host}?date=${dateInput.value}`
+  let dayChosen = parseDateStr(dateInput.value);
+  getMealInfo(schoolCode, officeCode, dayChosen);
+  window.history.pushState({}, document.title, `?date=${dateInput.value}&schoolcode=${schoolCode}&officecode=${officeCode}`);
 };
 
 getMealInfo(getSchoolQuery(), getOfficeQuery(), getDateQuery());
