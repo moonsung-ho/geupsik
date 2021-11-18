@@ -15,6 +15,7 @@
 }
 .toastify {
   border-radius: 0.4rem !important;
+  color: #000;
 }
 label {
   font-size: small;
@@ -159,4 +160,7 @@ html.dark p {
 }
 html.dark ::-webkit-calendar-picker-indicator {
   filter: invert(1);
+}
+html.dark .toastify {
+  color: #fff;
 }
