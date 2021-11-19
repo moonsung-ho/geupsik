@@ -15,6 +15,7 @@
 }
 .toastify {
   border-radius: 0.4rem !important;
+  color: #000;
 }
 label {
   font-size: small;
