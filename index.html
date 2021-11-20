@@ -168,23 +168,7 @@
       data-ad-width="160"
       data-ad-height="600"
     ></ins>
-    <script>
-      if (window.innerWidth < 600) {
-        document.querySelector('.kakao_ad_area').remove();
-        document.querySelector('.kakao_ad_area').remove();
-        document.body.innerHTML = `${document.body.innerHTML}<ins class="kakao_ad_area kakao_ad_area_bottom" style="display: inline-block;
-      text-decoration: none;
-      height: 600px;
-      max-height: inherit;
-      min-height: 600px;
-      min-width: 160px;
-      width: 160px;" 
-      data-ad-unit    = "DAN-7HmwVSsrFXHbosF1" 
-      data-ad-width   = "320" 
-      data-ad-height  = "50"></ins> `;
-      }
-    </script>
-    <footer>
+    <footer id="footer">
       개발자에게 <a href="mailto:moon7959@kakao.com">이메일</a>로 문의하세요.
       <img
         id="badge"
@@ -197,6 +181,32 @@
             alt="깃허브" /></a
       ></span>
     </footer>
+    <script>
+      if (window.innerWidth < 600) {
+        document.querySelector('.kakao_ad_area').remove();
+        document.querySelector('.kakao_ad_area').remove();
+        let ad = document.createElement('ins');
+        ad.classList.add('kakao_ad_area');
+        ad.classList.add('kakao_ad_area_bottom');
+        ad.setAttribute('data-ad-unit', 'DAN-7HmwVSsrFXHbosF1');
+        ad.setAttribute('data-ad-width', '320');
+        ad.setAttribute('data-ad-height', '50');
+        ad.setAttribute(
+          'style',
+          `display: inline-block;
+      text-decoration: none;
+      height: 600px;
+      max-height: inherit;
+      min-height: 600px;
+      min-width: 160px;
+      width: 160px;`,
+        );
+        document.getElementById('footer').appendChild(document.createElement('br'));
+        document.getElementById('footer').appendChild(ad);
+        console.log(ad);
+      }
+    </script>
+
     <script
       type="text/javascript"
       src="//t1.daumcdn.net/kas/static/ba.min.js"
