@@ -8,6 +8,8 @@ import toast from './toast.js';
 export let schoolCode = getSchoolCode();
 export let officeCode = localStorage.getItem('officecode');
 
+
+
 if (document.querySelector("html").className === "dark") {
   document.querySelector("#github").innerHTML = '<a href="https://github.com/sungho0205/geupsik"><img src="images/github.png" alt="깃허브"></a>'
 }
@@ -28,6 +30,15 @@ if (location.host.includes('xn--kj0b080b')) {
 }
 
 printNASAPicture();
+
+if (window.innerWidth < 600) {
+  document.querySelectorAll(".kakao_ad_area")[0].style.visibility = "hidden";
+  document.querySelectorAll(".kakao_ad_area")[1].style.visibility = "hidden";
+  document.body.innerHTML = `${document.body.innerHTML}<ins class="kakao_ad_area" style="display:none;" 
+  data-ad-unit    = "DAN-7HmwVSsrFXHbosF1" 
+  data-ad-width   = "320" 
+  data-ad-height  = "50"></ins> `
+}
 
 //url params
 export let dateInput = document.querySelector('#select-date');

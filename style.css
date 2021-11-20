@@ -63,6 +63,23 @@ span {
   margin: 0px;
   padding: 0px;
 }
+.kakao_ad_area_right {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  transform: translate(0%, -7%);
+}
+.kakao_ad_area_left {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transform: translate(0%, -7%);
+}
+.kakao_ad_area_bottom {
+  position: absolute;
+  text-align: center !important;
+  bottom: 0;
+}
 #badge {
   height: 13px;
   margin-top: 3.5px;
