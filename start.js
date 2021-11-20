@@ -31,15 +31,6 @@ if (location.host.includes('xn--kj0b080b')) {
 
 printNASAPicture();
 
-if (window.innerWidth < 600) {
-  document.querySelectorAll(".kakao_ad_area")[0].style.visibility = "hidden";
-  document.querySelectorAll(".kakao_ad_area")[1].style.visibility = "hidden";
-  document.body.innerHTML = `${document.body.innerHTML}<ins class="kakao_ad_area" style="display:none;" 
-  data-ad-unit    = "DAN-7HmwVSsrFXHbosF1" 
-  data-ad-width   = "320" 
-  data-ad-height  = "50"></ins> `
-}
-
 //url params
 export let dateInput = document.querySelector('#select-date');
 const urlSearchParams = new URLSearchParams(window.location.search);

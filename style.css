@@ -36,6 +36,7 @@ footer {
   bottom: 0;
   width: 100%;
   padding: 3px 0;
+  height: 20px !important;
 }
 a {
   font-size: small !important;
@@ -77,8 +78,11 @@ span {
 }
 .kakao_ad_area_bottom {
   position: absolute;
-  text-align: center !important;
-  bottom: 0;
+  bottom: 0 !important;
+  margin: 0;
+  width: 320px !important;
+  transform: translate(-50%, 0);
+  margin-bottom: 25px !important;
 }
 #badge {
   height: 13px;
