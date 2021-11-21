@@ -5,7 +5,7 @@ import {
   getPrevDate,
   getPrevdateStr
 } from './date_utilities.mjs';
-import { dateInput, schoolCode, officeCode } from './start.js';
+import { dateInput, schoolCode, officeCode } from '/js/start.js';
 
 window.addEventListener('keyup', checkKey);
 function checkKey(e) {

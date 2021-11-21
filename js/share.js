@@ -1,5 +1,5 @@
-import { parseDateStr } from './date_utilities.mjs';
-import { dateInput, schoolCode, officeCode } from './start.js';
+import { parseDateStr } from '/js/date_utilities.mjs';
+import { dateInput, schoolCode, officeCode } from '/js/start.js';
 
 if (typeof navigator.share === 'undefined') {
   // 공유하기 버튼을 지원하지 않는 경우에 대한 폴백 처리

@@ -1,9 +1,9 @@
-import { getSchoolCode } from './localstorage.mjs';
-import { getDateStr, parseDateStr } from './date_utilities.mjs';
-import { getMealInfo } from './api.mjs';
+import { getSchoolCode } from '/js/localstorage.mjs';
+import { getDateStr, parseDateStr } from '/js/date_utilities.mjs';
+import { getMealInfo } from '/js/api.mjs';
 import { printNASAPicture } from './printNASAPicture.mjs';
-import { getOfficeQuery, getSchoolQuery, getDateQuery } from './getQuery.js';
-import toast from './toast.js';
+import { getOfficeQuery, getSchoolQuery, getDateQuery } from '/js/getQuery.js';
+import toast from '/js/toast.js';
 
 export let schoolCode = getSchoolCode();
 export let officeCode = localStorage.getItem('officecode');

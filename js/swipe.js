@@ -1,11 +1,11 @@
-import { getMealInfo } from './api.mjs';
+import { getMealInfo } from '/js/api.mjs';
 import {
   getNextDate,
   getNextdateStr,
   getPrevDate,
   getPrevdateStr
-} from './date_utilities.mjs';
-import { dateInput, schoolCode, officeCode } from './start.js';
+} from '/js/date_utilities.mjs';
+import { dateInput, schoolCode, officeCode } from '/js/start.js';
 
 document.addEventListener('touchstart', handleTouchStart, false);
 document.addEventListener('touchmove', handleTouchMove, false);

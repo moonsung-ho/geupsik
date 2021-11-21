@@ -5,7 +5,7 @@ const CACHE_NAME = "cache-v1";
 const FILES_TO_CACHE = [
     "/offline.html",
     "/favicon.ico",
-    "/style.css"
+    "/css/style.css"
 ];
 
 // 상술한 파일 캐싱
