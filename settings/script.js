@@ -24,6 +24,10 @@ function get() {
     .then((res) => res.json())
     .then((json) => {
       if (json['schoolInfo'][0].head[0]['list_total_count'] >= 2) {
+        let schoolCode = json['schoolInfo'][1].row[0]['SD_SCHUL_CODE'];
+        let officeCode = json['schoolInfo'][1].row[0]['ATPT_OFCDC_SC_CODE'];
+        localStorage.setItem('schoolcode', schoolCode);
+        localStorage.setItem('officecode', officeCode);
         document.getElementById('select').hidden = false;
         document.getElementById('select').innerHTML = '';
         let n = 0;
@@ -58,14 +62,7 @@ function get() {
             }(${officeName})</option>`;
           n = n + 1;
         }
-        let schoolCode = json['schoolInfo'][1].row[0]['SD_SCHUL_CODE'];
-        let officeCode = json['schoolInfo'][1].row[0]['ATPT_OFCDC_SC_CODE'];
-        if (schoolCode) {
-          localStorage.setItem('schoolcode', schoolCode);
-        }
-        if (officeCode) {
-          localStorage.setItem('officecode', officeCode);
-        }
+        
       } else {
         let schoolCode = json['schoolInfo'][1].row[0]['SD_SCHUL_CODE'];
         let officeCode = json['schoolInfo'][1].row[0]['ATPT_OFCDC_SC_CODE'];
