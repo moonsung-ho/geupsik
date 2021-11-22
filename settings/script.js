@@ -1,7 +1,7 @@
 window.addEventListener("load", () => {
   if (localStorage.getItem('alergy') === 'true') {
     $(".checkbox").trigger("click");
-    localStorage.setItem('alergy', 'true');  
+    localStorage.setItem('alergy', 'true');
     console.log("start")
   }
 })
@@ -75,6 +75,9 @@ function get() {
           localStorage.setItem('officecode', officeCode);
         }
         document.getElementById('select').hidden = true;
+        document.getElementById('select').innerHTML = `${document.getElementById('select').innerHTML
+          }<option>${json['schoolInfo'][1].row[n]['SCHUL_NM']
+          }(${officeName})</option>`;
       }
     })
     .catch((err) => {
