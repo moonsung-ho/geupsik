@@ -74,10 +74,8 @@ function get() {
         if (officeCode) {
           localStorage.setItem('officecode', officeCode);
         }
-        document.getElementById('select').hidden = true;
-        document.getElementById('select').innerHTML = `${document.getElementById('select').innerHTML
-          }<option>${json['schoolInfo'][1].row[n]['SCHUL_NM']
-          }(${officeName})</option>`;
+        document.getElementById('select').innerHTML = `<option>${json['schoolInfo'][1].row[0]['SCHUL_NM']
+          }</option>`;
       }
     })
     .catch((err) => {
