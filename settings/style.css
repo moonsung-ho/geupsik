@@ -44,6 +44,9 @@ button {
   margin-top: 6vh;
   font-size: 15px;
 }
+#search {
+  margin-top: 0;
+}
 button:hover {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }

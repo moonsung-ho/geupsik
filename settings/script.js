@@ -14,6 +14,7 @@ document.querySelector(".checkbox").addEventListener("click", () => {
   }
 })
 
+document.querySelector("#search").addEventListener("click", get);
 
 function get() {
   let school = document.getElementById('school').value;
