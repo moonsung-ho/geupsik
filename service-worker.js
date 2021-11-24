@@ -31,7 +31,6 @@ self.addEventListener("activate", (event) => {
 // 요청에 실패하면 오프라인 페이지 표시
 self.addEventListener("fetch", (event) => {
     if ("navigate" !== event.request.mode) return;
-
     event.respondWith(
         fetch(event.request).catch(() =>
             caches
