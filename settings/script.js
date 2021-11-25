@@ -62,10 +62,35 @@ function get() {
             }(${officeName})</option>`;
           n = n + 1;
         }
-        
+
       } else {
         let schoolCode = json['schoolInfo'][1].row[0]['SD_SCHUL_CODE'];
         let officeCode = json['schoolInfo'][1].row[0]['ATPT_OFCDC_SC_CODE'];
+        let officeName = json['schoolInfo'][1].row[0][
+          'ATPT_OFCDC_SC_NM'
+        ].substr(0, 4);
+        if (officeName.includes('북') || officeName.includes('남')) {
+          if (officeName === '충청남도') {
+            officeName = '충남';
+          }
+          if (officeName === '충청북도') {
+            officeName = '충북';
+          }
+          if (officeName === '전라남도') {
+            officeName = '전남';
+          }
+          if (officeName === '전라북도') {
+            officeName = '전북';
+          }
+          if (officeName === '경상남도') {
+            officeName = '경남';
+          }
+          if (officeName === '경상북도') {
+            officeName = '경북';
+          }
+        } else {
+          officeName = officeName.substr(0, 2);
+        }
         if (schoolCode) {
           localStorage.setItem('schoolcode', schoolCode);
         }
@@ -73,7 +98,7 @@ function get() {
           localStorage.setItem('officecode', officeCode);
         }
         document.getElementById('select').innerHTML = `<option>${json['schoolInfo'][1].row[0]['SCHUL_NM']
-          }</option>`;
+          }(${officeName})</option>`;
       }
     })
     .catch((err) => {
