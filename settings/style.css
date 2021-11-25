@@ -32,7 +32,6 @@ p {
   width: max-content;
   border-radius: 10px;
   padding: 5px;
-  display: flex;
   margin-top: 7vh;
   background-color: transparent !important;
 }
@@ -42,8 +41,7 @@ input {
 }
 button {
   border: 2px solid #000000;
-  border-radius: 15px;
-  margin-top: 6vh;
+  border-radius: 5px;
   font-size: 16pt;
 }
 #search {
