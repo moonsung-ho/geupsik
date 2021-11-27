@@ -2,6 +2,7 @@
 
 body {
   transition: background 0.7s;
+  position: relative;
 }
 .search,
 input,
@@ -51,6 +52,10 @@ button {
 #search {
   margin-top: 0;
 }
+a {
+  text-decoration: none;
+  color: #c4302b !important;
+}
 button:hover {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
@@ -60,7 +65,7 @@ select {
 h2 {
   font-size: 17pt;
   text-align: center;
-  margin-top: 5vh;
+  margin-top: 2vh;
   width: max-content;
   height: min-content;
 }
@@ -88,41 +93,12 @@ html.dark body {
 }
 
 body {
-  position: relative;
-  height: 100vh;
-}
-body:before {
-  content: '';
-  position: absolute;
-  left: -320%;
-  top: -320%;
-  background: -moz-radial-gradient(
-    center,
-    ellipse cover,
-    #ff512f 0%,
-    rgba(255, 255, 255, 0) 70%
-  );
-  /* FF3.6-15 */
-  background: -webkit-radial-gradient(
-    center,
-    ellipse cover,
-    #ff512f 0%,
-    rgba(255, 255, 255, 0) 70%
-  );
-  /* Chrome10-25,Safari5.1-6 */
-  background: radial-gradient(
-    ellipse at center,
-    #ff512f 0%,
-    rgba(255, 255, 255, 0) 70%
-  );
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#ff512f", endColorstr="#00ffffff",GradientType=1 );
-  /* IE6-9 fallback on horizontal gradient */
+  position: relative !important;
 }
 span {
-  margin-bottom: 100px !important;
+  margin-bottom: 70px !important;
 }
-body .toggles label#togglelabel {
+.toggles label#togglelabel {
   font-size: 1em;
   display: inline-block;
   margin-top: 12px;
@@ -130,17 +106,17 @@ body .toggles label#togglelabel {
   padding: 3px;
   border-radius: 10px;
 }
-body .toggles .switch {
+.toggles .switch {
   position: relative;
   display: inline-block;
   width: 50px;
   height: 28px;
   margin-top: 10px;
 }
-body .toggles .switch input {
+.toggles .switch input {
   display: none;
 }
-body .toggles .slider {
+.toggles .slider {
   position: absolute;
   cursor: pointer;
   top: 0;
@@ -151,7 +127,7 @@ body .toggles .slider {
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
-body .toggles .slider:before {
+.toggles .slider:before {
   position: absolute;
   content: '';
   height: 20px;
@@ -162,24 +138,24 @@ body .toggles .slider:before {
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
-body .toggles input:checked + .slider {
+.toggles input:checked + .slider {
   background-color: #ff512f;
 }
-body .toggles input:focus + .slider {
+.toggles input:focus + .slider {
   box-shadow: 0 0 1px #ff512f;
 }
-body .toggles input:checked + .slider:before {
+.toggles input:checked + .slider:before {
   -webkit-transform: translateX(22px);
   -ms-transform: translateX(22px);
   transform: translateX(22px);
 }
-body .toggles .slider.round {
+.toggles .slider.round {
   border-radius: 34px;
 }
-body .toggles .slider.round:before {
+.toggles .slider.round:before {
   border-radius: 50%;
 }
-body h1 {
+h1 {
   color: #fff;
   bottom: 0;
   background: #ff512f;
@@ -188,7 +164,7 @@ body h1 {
   letter-spacing: 2px;
   box-shadow: 4px 4px 0px #fff;
 }
-body h1:before {
+h1:before {
   content: '';
   position: absolute;
   width: 0;
