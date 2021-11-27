@@ -22,8 +22,11 @@ p {
   text-align: right;
   position: absolute;
   right: 0;
-  margin: 5px;
+  margin-right: 10px;
   bottom: 0;
+}
+p, a {
+  font-size: 10pt;
 }
 *:focus {
   outline: none;
