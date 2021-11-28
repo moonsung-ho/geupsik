@@ -25,7 +25,8 @@ p {
   margin-right: 10px;
   bottom: 0;
 }
-p, a {
+p,
+a {
   font-size: 13pt;
 }
 *:focus {
@@ -177,4 +178,9 @@ h1:before {
   border-color: #ff512f transparent transparent transparent;
   right: 0px;
   bottom: -23px;
+}
+@media screen and (max-width: 768px) {
+  .search {
+    width: 70%;
+  }
 }
