@@ -1,14 +1,19 @@
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css');
 
 body {
-  transition: background 0.7s;
   position: relative;
 }
-.search,
-input,
-select {
-  transition: background 0.7s;
+@media (prefers-reduced-motion: no-preference) {
+  body {
+    transition: background 0.7s;
+  }
+  .search,
+  input,
+  select {
+    transition: background 0.7s;
+  }
 }
+
 * {
   font-family: 'Pretendard Variable' !important;
   vertical-align: middle;
