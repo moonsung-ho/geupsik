@@ -7,7 +7,7 @@ import { getOfficeQuery, getSchoolQuery, getDateQuery } from '/js/getQuery.js';
 export let schoolCode = getSchoolCode();
 export let officeCode = localStorage.getItem('officecode');
 
-if (!localStorage.getItem('officecode')) {
+if (!localStorage.getItem('geupsik')) {
   Toastify({
     text: "스와이프로 날짜를 전환할 수 있습니다!",
     duration: 3000,
