@@ -3,7 +3,6 @@ import { getDateStr, parseDateStr } from '/js/date_utilities.mjs';
 import { getMealInfo } from '/js/api.mjs';
 import { printNASAPicture } from './printNASAPicture.mjs';
 import { getOfficeQuery, getSchoolQuery, getDateQuery } from '/js/getQuery.js';
-import toast from '/js/toast.js';
 
 export let schoolCode = getSchoolCode();
 export let officeCode = localStorage.getItem('officecode');
