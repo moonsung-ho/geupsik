@@ -22,10 +22,6 @@ if (!localStorage.getItem('geupsik')) {
   }).showToast();
 }
 
-if (document.querySelector("html").className === "dark") {
-  document.querySelector("#github").innerHTML = '<a href="https://github.com/sungho0205/geupsik"><img src="images/github.png" alt="깃허브"></a>'
-}
-
 printNASAPicture();
 
 //url params
