@@ -6,6 +6,10 @@ window.addEventListener("load", () => {
   }
 })
 
+if (localStorage.getItem("alergy_in")) {
+  $("#alergyselect").val(localStorage.getItem("alergy_in")).prop("selected", true);
+}
+
 document.querySelector(".checkbox").addEventListener("click", () => {
   if (localStorage.getItem("alergy") === "false" || !localStorage.getItem("alergy")) {
     localStorage.setItem("alergy", "true");
@@ -106,6 +110,11 @@ function get() {
     });
 }
 const selectElement = document.querySelector('#select');
+
+document.querySelector("#alergyselect").addEventListener("change", (event) => {
+  let alergy = event.target.value;
+  localStorage.setItem("alergy_in", alergy)
+})
 
 selectElement.addEventListener('change', (event) => {
   let school = event.target.value.replace(event.target.value.slice(-4), '');

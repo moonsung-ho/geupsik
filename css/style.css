@@ -13,6 +13,9 @@
   -ms-user-select: none;
   user-select: none;
 }
+i {
+  color: #CF000B;
+}
 .toastify {
   border-radius: 0.4rem !important;
   color: #000;

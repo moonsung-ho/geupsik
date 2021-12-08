@@ -1,6 +1,16 @@
 import findBirthday from './displaybirthday.mjs';
 
 function removeUnusedThings(str) {
+  console.log(str)
+  let menu = str.split("<br/>");
+  console.log(menu)
+  let n = 0
+  while (n < menu.length) {
+    if (menu[n].includes("." + localStorage.getItem("alergy_in") + ".") || menu[n].includes(menu[n].replace(/[0-9]/g, "").replace(/\./g, "").trim() + localStorage.getItem("alergy_in") + ".")) {
+      str = str.replace(menu[n], `<i>${menu[n]}</i>`);
+    }
+    n++
+  }
   str = str.replace('우유2.', ''); // 우유는 표시 X
   if (str.includes('밥')) {
     str =
@@ -10,8 +20,8 @@ function removeUnusedThings(str) {
   }
   //밥 뒤에 이모지 표시
 
-  str = str.replace(/\*/g, ''); //별표 제거
-  str = str.replace('()', ''); // 빈 괄호는 표시 X
+  str = str.replaceAll("*", ''); //별표 제거
+  str = str.replaceAll('()', ''); // 빈 괄호는 표시 X
   displayAlergy();
   return str;
 
@@ -29,8 +39,11 @@ function removeUnusedThings(str) {
       menus = menus.filter(function (item) {
         return item !== null && item !== undefined && item !== '';
       });
-      let n = 0;
+      n = 0;
       while (n < menus.length) {
+        if (menus[n].includes(localStorage.getItem("alergy_in"))) {
+          str = str.replace(menus[n], `<b>${menus[n]}</b>`);
+        }
         str = str.replace(menus[n], menus[n] + "<span>  - </span>");
         n++;
       }
@@ -59,7 +72,7 @@ function removeUnusedThings(str) {
 const getMealInfo = (schoolCode, officeCode, { year, month, date }) => {
   const input = document.querySelector('#select-date');
   findBirthday({ month: input.value.split('-')[1], day: input.value.split('-')[2] })
-  
+
   //og 링크 설정
   let meta = document.createElement('meta');
   meta.property = "og:url";
