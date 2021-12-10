@@ -8,7 +8,7 @@ import { getOfficeQuery, getSchoolQuery, getDateQuery } from '/js/getQuery.js';
 if (localStorage.getItem('officeCode')) {
   var schoolCode = getSchoolCode();
   var officeCode = localStorage.getItem('officecode');
-} else if (sessionStorage.getItem('schoolcode')) {
+} else {
   var schoolCode = sessionStorage.getItem('schoolcode');
   var officeCode = sessionStorage.getItem('officecode');
 }
