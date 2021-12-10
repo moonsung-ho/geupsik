@@ -4,8 +4,16 @@ import { getMealInfo } from '/js/api.mjs';
 import { printNASAPicture } from './printNASAPicture.mjs';
 import { getOfficeQuery, getSchoolQuery, getDateQuery } from '/js/getQuery.js';
 
-export let schoolCode = getSchoolCode();
-export let officeCode = localStorage.getItem('officecode');
+
+if (localStorage.getItem('officeCode')) {
+  var schoolCode = getSchoolCode();
+  var officeCode = localStorage.getItem('officecode');
+} else if (sessionStorage.getItem('schoolcode')) {
+  var schoolCode = sessionStorage.getItem('schoolcode');
+  var officeCode = sessionStorage.getItem('officecode');
+} else {
+  location.href = '/settings';
+}
 
 if (!localStorage.getItem('geupsik')) {
   Toastify({
@@ -45,3 +53,13 @@ document.querySelector('#select-date').onchange = function () {
 };
 
 getMealInfo(getSchoolQuery(), getOfficeQuery(), getDateQuery());
+
+if (schoolCode && officeCode) {
+  sessionStorage.setItem('schoolcode', schoolCode);
+  sessionStorage.setItem('officecode', officeCode);
+} else {
+  sessionStorage.setItem('schoolcode', getSchoolQuery());
+  sessionStorage.setItem('officecode', getOfficeQuery());
+}
+
+export {schoolCode, officeCode};
