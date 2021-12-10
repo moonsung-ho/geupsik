@@ -11,8 +11,6 @@ if (localStorage.getItem('officeCode')) {
 } else if (sessionStorage.getItem('schoolcode')) {
   var schoolCode = sessionStorage.getItem('schoolcode');
   var officeCode = sessionStorage.getItem('officecode');
-} else {
-  location.href = '/settings';
 }
 
 if (!localStorage.getItem('geupsik')) {
@@ -62,4 +60,4 @@ if (schoolCode && officeCode) {
   sessionStorage.setItem('officecode', getOfficeQuery());
 }
 
-export {schoolCode, officeCode};
+export { schoolCode, officeCode };
