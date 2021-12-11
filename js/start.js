@@ -5,7 +5,7 @@ import { printNASAPicture } from './printNASAPicture.mjs';
 import { getOfficeQuery, getSchoolQuery, getDateQuery } from '/js/getQuery.js';
 
 
-if (localStorage.getItem('officeCode')) {
+if (localStorage.getItem('schoolcode')) {
   var schoolCode = getSchoolCode();
   var officeCode = localStorage.getItem('officecode');
 } else {
