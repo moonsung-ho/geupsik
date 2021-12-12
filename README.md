@@ -7,4 +7,4 @@
 <br>
 https://geupsik.ml
 <img width="1280" alt="" src="/images/intro-image.jpeg">
-<img src="https://i.ibb.co/87DZtYH/image.jpg" alt="image" border="0">
+<img src="/images/mockup.png" alt="image" border="0">
