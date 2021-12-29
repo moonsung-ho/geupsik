@@ -4,7 +4,6 @@ import { getMealInfo } from '/js/api.mjs';
 import { printNASAPicture } from './printNASAPicture.mjs';
 import { getOfficeQuery, getSchoolQuery, getDateQuery } from '/js/getQuery.js';
 
-
 if (localStorage.getItem('schoolcode')) {
   var schoolCode = getSchoolCode();
   var officeCode = localStorage.getItem('officecode');
