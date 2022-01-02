@@ -4,6 +4,41 @@ import { getMealInfo } from '/js/api.mjs';
 import { printNASAPicture } from './printNASAPicture.mjs';
 import { getOfficeQuery, getSchoolQuery, getDateQuery } from '/js/getQuery.js';
 
+if (!localStorage.getItem("experimental_beta")) {
+  if ((Math.random() * (10 - 1) + 1) === 2) {
+    Toastify({
+      text: "실험적 베타 기능 대상입니다.",
+      duration: 3000,
+      close: true,
+      gravity: "bottom", // `top` or `bottom`
+      position: "center", // `left`, `center` or `right`
+      stopOnFocus: false, // Prevents dismissing of toast on hover
+      style: {
+        background: "wheat",
+      },
+      onClick: function () { } // Callback after click
+    }).showToast();
+    localStorage.setItem("experimental_beta", "true");
+  } else {
+    localStorage.setItem("experimental_beta", "false");
+  }
+}
+
+if (localStorage.getItem("experimental_beta") === "true") {
+  document.querySelector("head").remove()
+  document.querySelector("body").remove()
+  document.querySelector("html").innerHTML = `
+  <head>
+  <link rel="stylesheet" href="/css/style.css" /></head>
+  <body>
+  <iframe
+  src="https://beta-geupsik.netlify.app/"
+  frameborder="0"
+  allowfullscreen="true"
+  allow="web-share"
+  sandbox="allow-same-origin allow-scripts"></iframe></body>`
+}
+
 if (localStorage.getItem('schoolcode')) {
   var schoolCode = getSchoolCode();
   var officeCode = localStorage.getItem('officecode');
