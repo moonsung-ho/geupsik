@@ -24,21 +24,6 @@ if (!localStorage.getItem("experimental_beta")) {
   }
 }
 
-if (localStorage.getItem("experimental_beta") === "true") {
-  document.querySelector("head").remove()
-  document.querySelector("body").remove()
-  document.querySelector("html").innerHTML = `
-  <head>
-  <link rel="stylesheet" href="/css/style.css" /></head>
-  <body>
-  <iframe
-  src="https://beta-geupsik.netlify.app/"
-  frameborder="0"
-  allowfullscreen="true"
-  allow="web-share"
-  sandbox="allow-same-origin allow-scripts"></iframe></body>`
-}
-
 if (localStorage.getItem('schoolcode')) {
   var schoolCode = getSchoolCode();
   var officeCode = localStorage.getItem('officecode');
