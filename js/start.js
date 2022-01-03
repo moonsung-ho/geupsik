@@ -34,7 +34,7 @@ if (localStorage.getItem('schoolcode')) {
 
 if (!localStorage.getItem('geupsik')) {
   Toastify({
-    text: "스와이프로 날짜를 전환할 수 있습니다!",
+    text: "스와이프 또는 방향키로 날짜를 전환할 수 있습니다!",
     duration: 3000,
     close: true,
     gravity: "bottom", // `top` or `bottom`
