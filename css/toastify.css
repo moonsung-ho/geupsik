@@ -14,6 +14,11 @@
   text-decoration: none;
   max-width: calc(50% - 20px);
   z-index: 2147483647;
+  border-radius: 0.4rem !important;
+  color: #000;
+  width: max-content;
+  padding: 10px !important;
+  font-size: 15px;
 }
 .toastify.on {
   opacity: 1;
