@@ -124,131 +124,101 @@
 
       gtag('config', 'G-B0BT0QF94C');
     </script>
+    <script
+      src="https://cdn.onesignal.com/sdks/OneSignalSDK.js"
+      async=""
+    ></script>
+    <script>
+      window.OneSignal = window.OneSignal || [];
+      OneSignal.push(function () {
+        OneSignal.init({
+          appId: '80bc2e87-e118-4eee-aa3b-5171fbbc96dc',
+        });
+      });
+    </script>
   </head>
 
   <body>
     <div id="the_whole_new_world">
-    <button id="sharebutton">🔗</button>
-    <label for="select-date">날짜 선택</label>
-    <button onclick="window.location.href='./settings'" id="button">⚙️</button>
-    <br />
-    <input id="select-date" type="date" value="2021-09-09" class="input" />
-    <div id="school-name-div">
-      <p id="school-name"></p>
-    </div>
-    <h1 class="mealElement"><br />급식을 조리하는<br />중입니다...</h1>
-    <p class="zeroKcal">0 칼로리</p>
+      <button id="sharebutton">🔗</button>
+      <label for="select-date">날짜 선택</label>
+      <button onclick="window.location.href='./settings'" id="button">
+        ⚙️
+      </button>
+      <br />
+      <input id="select-date" type="date" value="2021-09-09" class="input" />
+      <div id="school-name-div">
+        <p id="school-name"></p>
+      </div>
+      <h1 class="mealElement"><br />급식을 조리하는<br />중입니다...</h1>
+      <p class="zeroKcal">0 칼로리</p>
 
-    <ins
-      class="kakao_ad_area kakao_ad_area_left"
-      style="
-        display: inline-block;
-        text-decoration: none;
-        height: 600px;
-        max-height: inherit;
-        min-height: 600px;
-        min-width: 160px;
-        width: 160px;
-      "
-      data-ad-unit="DAN-0itBucx9qJw877lC"
-      data-ad-width="160"
-      data-ad-height="600"
-    ></ins>
-    <ins
-      class="kakao_ad_area kakao_ad_area_right"
-      style="
-        display: inline-block;
-        text-decoration: none;
-        height: 600px;
-        max-height: inherit;
-        min-height: 600px;
-        min-width: 160px;
-        width: 160px;
-      "
-      data-ad-unit="DAN-iiABCV2wmTjQwfmP"
-      data-ad-width="160"
-      data-ad-height="600"
-    ></ins>
+      <ins
+        class="kakao_ad_area kakao_ad_area_left"
+        style="
+          display: inline-block;
+          text-decoration: none;
+          height: 600px;
+          max-height: inherit;
+          min-height: 600px;
+          min-width: 160px;
+          width: 160px;
+        "
+        data-ad-unit="DAN-0itBucx9qJw877lC"
+        data-ad-width="160"
+        data-ad-height="600"
+      ></ins>
+      <ins
+        class="kakao_ad_area kakao_ad_area_right"
+        style="
+          display: inline-block;
+          text-decoration: none;
+          height: 600px;
+          max-height: inherit;
+          min-height: 600px;
+          min-width: 160px;
+          width: 160px;
+        "
+        data-ad-unit="DAN-iiABCV2wmTjQwfmP"
+        data-ad-width="160"
+        data-ad-height="600"
+      ></ins>
 
-    <script>
-      if (window.innerWidth < 600) {
-        document.querySelector('.kakao_ad_area').remove();
-        document.querySelector('.kakao_ad_area').remove();
-        let ad = document.createElement('ins');
-        ad.classList.add('kakao_ad_area');
-        ad.classList.add('kakao_ad_area_bottom');
-        ad.setAttribute('data-ad-unit', 'DAN-7HmwVSsrFXHbosF1');
-        ad.setAttribute('data-ad-width', '320');
-        ad.setAttribute('data-ad-height', '50');
-        ad.setAttribute('style', `display: none`);
-        document
-          .getElementById('footer')
-          .appendChild(document.createElement('br'));
-        document.getElementById('footer').appendChild(ad);
-        console.log(ad);
-      }
-    </script>
-    <!-- 채널톡 -->
-    <script>
-      (function () {
-        var w = window;
-        if (w.ChannelIO) {
-          return (window.console.error || window.console.log || function () {})(
-            'ChannelIO script included twice.',
-          );
+      <script>
+        if (window.innerWidth < 600) {
+          document.querySelector('.kakao_ad_area').remove();
+          document.querySelector('.kakao_ad_area').remove();
+          let ad = document.createElement('ins');
+          ad.classList.add('kakao_ad_area');
+          ad.classList.add('kakao_ad_area_bottom');
+          ad.setAttribute('data-ad-unit', 'DAN-7HmwVSsrFXHbosF1');
+          ad.setAttribute('data-ad-width', '320');
+          ad.setAttribute('data-ad-height', '50');
+          ad.setAttribute('style', `display: none`);
+          document
+            .getElementById('footer')
+            .appendChild(document.createElement('br'));
+          document.getElementById('footer').appendChild(ad);
+          console.log(ad);
         }
-        var ch = function () {
-          ch.c(arguments);
-        };
-        ch.q = [];
-        ch.c = function (args) {
-          ch.q.push(args);
-        };
-        w.ChannelIO = ch;
-        function l() {
-          if (w.ChannelIOInitialized) {
-            return;
-          }
-          w.ChannelIOInitialized = true;
-          var s = document.createElement('script');
-          s.type = 'text/javascript';
-          s.async = true;
-          s.src = 'https://cdn.channel.io/plugin/ch-plugin-web.js';
-          s.charset = 'UTF-8';
-          var x = document.getElementsByTagName('script')[0];
-          x.parentNode.insertBefore(s, x);
-        }
-        if (document.readyState === 'complete') {
-          l();
-        } else if (window.attachEvent) {
-          window.attachEvent('onload', l);
-        } else {
-          window.addEventListener('DOMContentLoaded', l, false);
-          window.addEventListener('load', l, false);
-        }
-      })();
-      ChannelIO('boot', {
-        pluginKey: 'a1d0fe32-641d-4e6f-bf5e-eac59303f2c0',
-      });
-    </script>
-    <!-- 채널톡 -->
-    <script
-      type="text/javascript"
-      src="//t1.daumcdn.net/kas/static/ba.min.js"
-      async
-    ></script>
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/toastify-js"
-    ></script>
-    <link rel="stylesheet" type="text/css" href="/css/toastify.css" />
-    <script src="js/start.js" type="module"></script>
-    <script src="js/detectie.js" type="module"></script>
-    <script src="js/swipe.js" type="module"></script>
-    <script src="js/share.js" type="module"></script>
-    <script src="js/isIos.js" type="module"></script>
-    <script src="js/old_domain.js" type="module"></script>
-    <script src="js/checkKey.js" type="module"></script>
+      </script>
+      <script
+        type="text/javascript"
+        src="//t1.daumcdn.net/kas/static/ba.min.js"
+        async
+      ></script>
+      <script
+        type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/toastify-js"
+      ></script>
+      <link rel="stylesheet" type="text/css" href="/css/toastify.css" />
+      <script src="js/start.js" type="module"></script>
+      <script src="js/detectie.js" type="module"></script>
+      <script src="js/swipe.js" type="module"></script>
+      <script src="js/share.js" type="module"></script>
+      <script src="js/isIos.js" type="module"></script>
+      <script src="js/old_domain.js" type="module"></script>
+      <script src="js/checkKey.js" type="module"></script>
     </div>
   </body>
 </html>

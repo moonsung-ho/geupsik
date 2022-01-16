@@ -85,7 +85,7 @@ const getMealInfo = (schoolCode, officeCode, { year, month, date }) => {
   document.getElementsByTagName('head')[0].appendChild(meta);
 
   const requestUrl = `https://open.neis.go.kr/hub/mealServiceDietInfo?KEY=4c1690204c08404ca7f1775720f17054&Type=json&pIndex=1&pSize=100&ATPT_OFCDC_SC_CODE=${officeCode}&SD_SCHUL_CODE=${schoolCode}&MLSV_YMD=${year}${month}${date}`;
-  console.log(requestUrl);
+  console.log(schoolCode * 1, officeCode, { year, month, date });
   const mealElement = document.getElementsByClassName('mealElement')[0];
   const kcalElement = document.getElementsByClassName('zeroKcal')[0];
   const schoolNameElement = document.getElementById('school-name');
