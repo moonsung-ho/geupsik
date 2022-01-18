@@ -32,6 +32,7 @@ Toastify({
 }).showToast();
 
 document.querySelector("#search").addEventListener("click", get);
+document.querySelector("input#school").addEventListener("input", get);
 
 function get() {
   let school = document.getElementById('school').value;
@@ -46,8 +47,9 @@ function get() {
         localStorage.setItem('schoolcode', schoolCode);
         localStorage.setItem('officecode', officeCode);
         document.getElementById('select').hidden = false;
-        document.getElementById('select').innerHTML = '';
+        document.querySelector('datalist').innerHTML = '';
         let n = 0;
+        let datalistInnerHTML = ""
         while (n + 1 <= json['schoolInfo'][0].head[0]['list_total_count']) {
           let officeName = json['schoolInfo'][1].row[n][
             'ATPT_OFCDC_SC_NM'
@@ -74,12 +76,12 @@ function get() {
           } else {
             officeName = officeName.substr(0, 2);
           }
-          document.getElementById('select').innerHTML = `${document.getElementById('select').innerHTML
-            }<option>${json['schoolInfo'][1].row[n]['SCHUL_NM']
-            }(${officeName})</option>`;
+          if (n < 11) {
+            datalistInnerHTML += `<option>${json['schoolInfo'][1].row[n]['SCHUL_NM']}(${officeName})</option>`;
+          }
           n = n + 1;
         }
-
+        document.querySelector("datalist").innerHTML = datalistInnerHTML
       } else {
         let schoolCode = json['schoolInfo'][1].row[0]['SD_SCHUL_CODE'];
         let officeCode = json['schoolInfo'][1].row[0]['ATPT_OFCDC_SC_CODE'];
@@ -114,7 +116,7 @@ function get() {
         if (officeCode) {
           localStorage.setItem('officecode', officeCode);
         }
-        document.getElementById('select').innerHTML = `<option>${json['schoolInfo'][1].row[0]['SCHUL_NM']
+        document.querySelector('datalist').innerHTML = `<option>${json['schoolInfo'][1].row[0]['SCHUL_NM']
           }(${officeName})</option>`;
       }
     })
