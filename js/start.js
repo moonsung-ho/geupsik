@@ -24,6 +24,72 @@ if (!localStorage.getItem("experimental_beta")) {
   }
 }
 
+if (navigator.userAgent.match(/iPad/i)) {
+  Toastify({
+    text: "급식 아이패드 앱이 출시되었습니다! (여기를 터치해서 App Store로 이동)",
+    duration: 3000,
+    close: true,
+    gravity: "bottom", // `top` or `bottom`
+    position: "center", // `left`, `center` or `right`
+    stopOnFocus: false, // Prevents dismissing of toast on hover
+    style: {
+      background: "wheat"
+    },
+    onClick: function () {
+      location.href =
+        "https://apps.apple.com/kr/app/%EA%B8%89%EC%8B%9D/id1613044393?platform=iphone";
+    } // Callback after click
+  }).showToast();
+} else if (navigator.userAgent.match(/Tablet/i)) {
+  Toastify({
+    text: "급식 안드로이드 앱이 출시되었습니다! (여기를 터치해서 Play Store로 이동)",
+    duration: 3000,
+    close: true,
+    gravity: "bottom", // `top` or `bottom`
+    position: "center", // `left`, `center` or `right`
+    stopOnFocus: false, // Prevents dismissing of toast on hover
+    style: {
+      background: "wheat"
+    },
+    onClick: function () {
+      location.href =
+        "https://play.google.com/store/apps/details?id=com.sungho0205.geupsik";
+    } // Callback after click
+  }).showToast();
+} else if (navigator.userAgent.match(/Android/i)) {
+  Toastify({
+    text: "급식 안드로이드 앱이 출시되었습니다! (여기를 터치해서 Play Store로 이동)",
+    duration: 3000,
+    close: true,
+    gravity: "bottom", // `top` or `bottom`
+    position: "center", // `left`, `center` or `right`
+    stopOnFocus: false, // Prevents dismissing of toast on hover
+    style: {
+      background: "wheat"
+    },
+    onClick: function () {
+      location.href =
+        "https://play.google.com/store/apps/details?id=com.sungho0205.geupsik";
+    } // Callback after click
+  }).showToast();
+} else if (navigator.userAgent.match(/iPhone | iPod/i)) {
+  Toastify({
+    text: "급식 아이폰 앱이 출시되었습니다! (여기를 터치해서 App Store로 이동)",
+    duration: 3000,
+    close: true,
+    gravity: "bottom", // `top` or `bottom`
+    position: "center", // `left`, `center` or `right`
+    stopOnFocus: false, // Prevents dismissing of toast on hover
+    style: {
+      background: "wheat"
+    },
+    onClick: function () {
+      location.href =
+        "https://apps.apple.com/kr/app/%EA%B8%89%EC%8B%9D/id1613044393?platform=iphone";
+    } // Callback after click
+  }).showToast();
+}
+
 if (localStorage.getItem("schoolcode")) {
   var schoolCode = getSchoolCode();
   var officeCode = localStorage.getItem("officecode");
